@@ -43,13 +43,13 @@ Ask specific clarifying questions before assuming. Challenge assumptions ("What 
 
 ## Skills
 
-56 skills in `.claude/skills/<name>/SKILL.md`. They load on demand and check workspace context and connected MCPs automatically.
+57 skills in `.claude/skills/<name>/SKILL.md`. They load on demand and check workspace context and connected MCPs automatically.
 
 **Mobilize:** `/proposal-draft` `/problem-statement` `/kickoff-plan` `/stakeholder-map` `/workplan-build` `/data-request` `/connect-mcps`
 
 **Structure the problem:** `/day-one-answer` `/issue-tree` `/hypothesis-draft` `/prioritize-analyses`
 
-**Diagnose:** `/ingest-materials` `/interview-guide` `/interview-synthesis` `/survey-design` `/fact-base` `/data-exploration` `/market-sizing` `/benchmark-analysis` `/competitive-landscape` `/value-driver-tree` `/root-cause-analysis`
+**Diagnose:** `/ingest-materials` `/research-plan` `/interview-guide` `/interview-synthesis` `/survey-design` `/fact-base` `/data-exploration` `/market-sizing` `/benchmark-analysis` `/competitive-landscape` `/value-driver-tree` `/root-cause-analysis`
 
 **Model:** `/initiative-sizing` `/model-spec` `/model-build` `/model-audit` `/scenario-sensitivity` `/number-tie-out`
 
@@ -69,7 +69,7 @@ Connect with `/connect-mcps connect to [tool]` (Google Drive, Sheets, Slides, ca
 
 **Connected:** _None yet. Run `/connect-mcps` to set up._
 
-**Query routing:** Client data → data room or `context-library/data/`. Market and competitors → web search, then `context-library/research/`. Interviews → `context-library/interviews/`. Models → `context-library/models/`. Decisions → `context-library/decisions/`.
+**Query routing:** Client data → data room or `context-library/data/`. Market and competitors → `/research-plan` (plan, then web search), then `context-library/research/`. Interviews → `context-library/interviews/`. Models → `context-library/models/`. Decisions → `context-library/decisions/`.
 
 ## File Creation
 

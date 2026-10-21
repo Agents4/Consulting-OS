@@ -10,7 +10,7 @@ import glob, json, os, re, shutil
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", ".."))
 NAME = "consulting-os"
-VERSION = "1.1.0"
+VERSION = "1.2.0"
 EXT = f"~/.gemini/extensions/{NAME}"
 EXCLUDE = {"connect-mcps", "google-workspace-output"}   # Claude connector specific
 
@@ -25,6 +25,8 @@ def rewrite_paths(t):
         t = t.replace(d, f"{EXT}/{d}")
     t = re.sub(r"(?<![\w/.~-])(templates/|sub-agents/|advanced/)", EXT + r"/\1", t)
     return t
+
+WEB_SKILLS = {"research-plan", "competitive-landscape", "market-sizing", "benchmark-analysis"}
 
 def convert_skill(src):
     s = read(src)
@@ -42,6 +44,10 @@ def convert_skill(src):
     body = rewrite_paths(body)
     note = (f"> Extension note: core files (frameworks, engagement model, templates, sub-agents) are in `{EXT}/`. "
             "Engagement files (context-library/engagements, stakeholders, data, etc.) and all new outputs live in the current workspace folder.\n\n")
+    if name in WEB_SKILLS:
+        note += ("> Web research: search with the `google_web_search` tool and read pages with the `web_fetch` tool. "
+                 "Wherever this skill says web search, WebSearch, or WebFetch, use those two tools. "
+                 "If `web_fetch` cannot load a page, log it as unreachable and ask the user for the file. Do not work around it.\n\n")
     body = re.sub(r"(?m)^(# .+\n)", r"\1\n" + note.replace("\\", "\\\\"), body, count=1)
     return name, desc, f"---\nname: {name}\ndescription: {json.dumps(desc, ensure_ascii=False)}\n---\n{body}"
 
@@ -77,7 +83,7 @@ c = read(ROOT + "/CLAUDE.md")
 c = c.replace("# CLAUDE: Consulting OS", "# Consulting OS (Gemini CLI extension)")
 c = re.sub(r"(?m)^You are the AI copilot", "You are the AI copilot", c)
 # skills section
-c = re.sub(r"55 skills in `\.claude/skills/<name>/SKILL\.md`\. They load on demand and check workspace context and connected MCPs automatically\.",
+c = re.sub(r"\d+ skills in `\.claude/skills/<name>/SKILL\.md`\. They load on demand and check workspace context and connected MCPs automatically\.",
            f"{count} skills ship with this extension. Gemini activates a skill when a task matches it, and every skill is also a slash command (for example `/issue-tree`). Skills check workspace context and connected tools automatically. `/engagement-init` scaffolds a new engagement folder.", c)
 c = c.replace(" `/connect-mcps`", "")
 c = re.sub(r"\n\*\*Google formats:\*\*[^\n]*\n", "\n", c)
@@ -85,8 +91,8 @@ c = re.sub(r"\n\*\*Google formats:\*\*[^\n]*\n", "\n", c)
 c = re.sub(r"(?s)## MCPs\n.*?(?=\*\*Query routing:\*\*)",
            "## Connected tools\n\nAll skills work without connected tools. To add live access, install an extension such as Google Workspace (`gemini extensions install https://github.com/gemini-cli-extensions/workspace`) or add an MCP server in `settings.json`. Confirm client IT approval before connecting anything that touches client data. Ask before using any connected tool on client data.\n\n**Connected:** _None yet._\n\n", c)
 # file creation
-c = re.sub(r"\*\*CRITICAL: Claude writes ALL new files to `outputs/`\. Never write to `context-library/` directly\. The user moves finalized work there manually\.\*\* Exception: the learning log and edits to this file, only with the user's approval\.",
-           "**CRITICAL: Write ALL new files to `outputs/` in the user's current workspace folder. Never write to `context-library/` directly, and never write inside the extension folder. The user moves finalized work into `context-library/` manually.** Exception: the learning log, only with the user's approval.", c)
+c = re.sub(r"\*\*CRITICAL: Claude writes ALL new files[^\n]*",
+           "**CRITICAL: Write ALL new files to `outputs/` in the user's current workspace folder. Never write to `context-library/` directly, and never write inside the extension folder. The user moves finalized work into `context-library/` manually.** Exceptions, each only with the user's explicit approval: the learning log, and `/ingest-materials` updates to named workspace `context-library/` files (approved one file at a time, with a backup of the original saved in `outputs/` first).", c)
 c = re.sub(r"\*\*Templates:\*\* `templates/`[^\n]*", f"**Templates:** `{EXT}/templates/` holds working templates including `model-starter-template.xlsx` and `ghost-deck-starter.pptx`. Copy them into `outputs/` and work on the copy.", c)
 c = re.sub(r"\*\*Google option:\*\*[^\n]*\n\n\*\*Gemini option:\*\*[^\n]*\n\n\*\*Copilot option:\*\*[^\n]*\n",
            "**Google formats:** Build models and decks as .xlsx and .pptx in `outputs/`. To get Google Sheets or Slides, upload the files to Drive and open them with Google Sheets or Slides. Use Google for client data only with the client's written approval. Share with named people only.\n", c)
@@ -99,6 +105,8 @@ c = re.sub(r"(?s)## Getting Started\n.*?(?=Read `context-library/engagement-mode
 c = c.replace("Read `context-library/engagement-model/00-overview.md` once", f"Read `{EXT}/context-library/engagement-model/00-overview.md` once")
 c = c.replace("Everything works without MCPs. They add live data access, not core functionality.", "Everything works without connected tools. They add live data access, not core functionality.")
 c = c.replace("Claude", "Gemini")
+for bad in ("`.claude/skills", "Gemini writes ALL new files", "/connect-mcps"):
+    assert bad not in c, f"GEMINI.md substitution failed: {bad}"
 
 pathblock = f"""## Where files live (read this first)
 

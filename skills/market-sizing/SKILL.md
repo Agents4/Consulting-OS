@@ -7,6 +7,8 @@ description: "Size a market top-down and bottom-up, reconcile the two, and state
 
 > Extension note: core files (frameworks, engagement model, templates, sub-agents) are in `~/.gemini/extensions/consulting-os/`. Engagement files (context-library/engagements, stakeholders, data, etc.) and all new outputs live in the current workspace folder.
 
+> Web research: search with the `google_web_search` tool and read pages with the `web_fetch` tool. Wherever this skill says web search, WebSearch, or WebFetch, use those two tools. If `web_fetch` cannot load a page, log it as unreachable and ask the user for the file. Do not work around it.
+
 
 ## Quick Start
 
@@ -45,6 +47,7 @@ When this skill is invoked, immediately check:
 3. Framework guidance LAST (`~/.gemini/extensions/consulting-os/context-library/frameworks/`, `~/.gemini/extensions/consulting-os/context-library/engagement-model/`)
 
 **Cross-Skill Links:**
+- If the question is still open and needs sourced web research -> Link to `research-plan`
 - If numbers feed a model -> Link to `model-spec`
 - If size feeds a prize -> Link to `initiative-sizing`
 - If numbers go on a slide -> Link to `slide-draft`

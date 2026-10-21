@@ -44,6 +44,7 @@ When this skill is invoked, immediately check:
 3. Framework guidance LAST (`context-library/frameworks/`, `context-library/engagement-model/`)
 
 **Cross-Skill Links:**
+- If the question is still open and needs sourced web research -> Link to `research-plan`
 - If numbers needed -> Link to `benchmark-analysis`
 - If size of market -> Link to `market-sizing`
 - If slide needed -> Link to `slide-draft`

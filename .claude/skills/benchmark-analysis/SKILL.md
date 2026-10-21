@@ -44,6 +44,7 @@ When this skill is invoked, immediately check:
 3. Framework guidance LAST (`context-library/frameworks/`, `context-library/engagement-model/`)
 
 **Cross-Skill Links:**
+- If the question is still open and needs sourced web research -> Link to `research-plan`
 - If gap needs sizing -> Link to `initiative-sizing`
 - If peers are unclear -> Link to `competitive-landscape`
 - If gap needs cause -> Link to `root-cause-analysis`

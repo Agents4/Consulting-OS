@@ -162,6 +162,7 @@ A hypothesis log works well as a Google Sheet with filters on Status and Confide
 - `/issue-tree` - Leaf structure
 - `/interview-synthesis` - Evidence
 - `/ingest-materials` - New evidence and conflicts from client materials
+- `/research-plan` - Sourced outside evidence, graded
 
 ### Handoff Format
 
