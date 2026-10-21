@@ -1,4 +1,4 @@
-description = "Plan and run web research tied to a hypothesis: research questions, source map, search plan, a logged and graded source trail, and a synthesis that updates the hypotheses."
+description = "Plan and run research from the issue tree: locked definitions, MECE ranked questions, source and method plan, compliance check, midpoint check-in, triangulated and graded sources, and a synthesis that updates the hypotheses."
 prompt = """
 Activate the `research-plan` skill with the activate_skill tool and follow it step by step for this task.
 
