@@ -1,6 +1,6 @@
 {
   "name": "consulting-os",
-  "version": "1.0.0",
-  "description": "Consulting OS: an MBB-style strategy engagement copilot with 53 skills and slash commands, review personas, frameworks, and model and deck templates.",
+  "version": "1.1.0",
+  "description": "Consulting OS: an MBB-style strategy engagement copilot with 54 skills and slash commands, review personas, frameworks, and model and deck templates.",
   "contextFileName": "GEMINI.md"
 }

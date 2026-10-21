@@ -20,6 +20,7 @@ ls CLAUDE.md README.md .claude/skills | head
 - [ ] Put the SOW, RFP, or brief in `context-library/client-materials/`
 - [ ] Put any data in `context-library/data/` (only if approved)
 - [ ] Put earlier decks, models, and notes in the matching subfolders
+- [ ] Run `/ingest-materials`: it digests each file, flags conflicts, and proposes updates to the fact base, hypotheses, stakeholders, decisions, and risks. Approve the updates you want applied
 
 ## Step 3: Test Three Skills
 - [ ] `/problem-statement`: Claude reads your engagement info and drafts the key question

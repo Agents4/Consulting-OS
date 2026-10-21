@@ -154,6 +154,7 @@ Update the Day-1 answer if a key hypothesis moves.
 **Pulls from:**
 - `/issue-tree` - Leaf structure
 - `/interview-synthesis` - Evidence
+- `/ingest-materials` - New evidence and conflicts from client materials
 
 ### Handoff Format
 
