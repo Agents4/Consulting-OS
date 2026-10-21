@@ -1,0 +1,7 @@
+description = "Assemble the handover: model guide, data, deck masters, roadmap, owners, and a handover session plan."
+prompt = """
+Activate the `handover-pack` skill with the activate_skill tool and follow it step by step for this task.
+
+Task details from the user (may be empty):
+{{args}}
+"""

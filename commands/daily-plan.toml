@@ -1,0 +1,7 @@
+description = "Plan the day: check-in priorities, review slots, handoffs, and check-out; keep the team's rhythm."
+prompt = """
+Activate the `daily-plan` skill with the activate_skill tool and follow it step by step for this task.
+
+Task details from the user (may be empty):
+{{args}}
+"""

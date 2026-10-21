@@ -134,3 +134,6 @@ Excel (Power Query for repeatable cleaning, PivotTables, Power Pivot), SQL, Pyth
 
 ## Model Owner Rule
 One person holds the master workbook. Everyone else sends changes to that person or works on a branch copy that is merged at a fixed time. The owner publishes a new version number daily.
+
+## Variant: Google Sheets
+The architecture (Cover, Guide, Inputs, Calc, Scenarios, Outputs, Checks, Log), color convention, formula rules, and review methods carry over unchanged. What changes: calculation is live, so verification is reading values and scanning for error cells; versions are named in Version history and frozen by copying to FINAL; Calc, Outputs, and Checks are protected; avoid QUERY, ARRAYFORMULA, IMPORTRANGE, and GOOGLEFINANCE if the file may be exported to Excel; sensitivity tables are formula grids, not Data Tables. Heavy models and very large data stay in Excel. Details: `advanced/google-workspace-option.md`.

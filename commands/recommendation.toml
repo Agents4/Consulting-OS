@@ -1,0 +1,7 @@
+description = "Synthesize the final recommendation: what, why, financial case, conditions, risks, and the ask."
+prompt = """
+Activate the `recommendation` skill with the activate_skill tool and follow it step by step for this task.
+
+Task details from the user (may be empty):
+{{args}}
+"""

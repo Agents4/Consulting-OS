@@ -1,0 +1,7 @@
+description = "Capture reusable assets after an engagement: frameworks, model modules, benchmarks, case study draft, expert contacts."
+prompt = """
+Activate the `knowledge-capture` skill with the activate_skill tool and follow it step by step for this task.
+
+Task details from the user (may be empty):
+{{args}}
+"""

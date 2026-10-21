@@ -1,0 +1,7 @@
+description = "State the best current answer to the key question on day 1, with the three to five things that must be true."
+prompt = """
+Activate the `day-one-answer` skill with the activate_skill tool and follow it step by step for this task.
+
+Task details from the user (may be empty):
+{{args}}
+"""

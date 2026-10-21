@@ -12,7 +12,11 @@ Connect only what the client allows.
 
 | Tool | Use |
 |---|---|
-| Google Drive or SharePoint | Read client documents and share outputs |
+| Google Drive | Read, create, convert, copy, and share files. Creates Google Sheets from CSV in one call |
+| Google Sheets editor | Build and edit models and trackers in place |
+| Google Slides editor | Build and edit decks in place, with linked Sheets charts |
+| Google Docs editor | Memos and write-ups |
+| SharePoint | Read client documents and share outputs |
 | Calendar | Plan SteerCo dates and check-ins |
 | Slack or Teams | Draft and send team messages |
 | Spreadsheets | Read data tables |

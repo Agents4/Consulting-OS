@@ -1,0 +1,7 @@
+description = "Synthesize interview notes into themes, quotes, and hypothesis updates with strength of evidence."
+prompt = """
+Activate the `interview-synthesis` skill with the activate_skill tool and follow it step by step for this task.
+
+Task details from the user (may be empty):
+{{args}}
+"""

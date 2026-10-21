@@ -1,0 +1,7 @@
+description = "Build an interview guide for client, customer, or expert interviews, tied to hypotheses."
+prompt = """
+Activate the `interview-guide` skill with the activate_skill tool and follow it step by step for this task.
+
+Task details from the user (may be empty):
+{{args}}
+"""

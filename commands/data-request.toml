@@ -1,0 +1,7 @@
+description = "Create and track data requests to the client: what, why, format, owner, due date, with confidentiality basis."
+prompt = """
+Activate the `data-request` skill with the activate_skill tool and follow it step by step for this task.
+
+Task details from the user (may be empty):
+{{args}}
+"""

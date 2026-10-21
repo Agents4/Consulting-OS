@@ -1,0 +1,12 @@
+.env
+.env.*
+.DS_Store
+*.log
+node_modules/
+__pycache__/
+.claude/settings.local.json
+# Client data: never commit raw client files
+context-library/data/*
+!context-library/data/.gitkeep
+context-library/client-materials/*
+!context-library/client-materials/.gitkeep

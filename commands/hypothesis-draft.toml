@@ -1,0 +1,7 @@
+description = "Write and maintain a hypothesis log: statement, evidence for/against, test, confidence, status."
+prompt = """
+Activate the `hypothesis-draft` skill with the activate_skill tool and follow it step by step for this task.
+
+Task details from the user (may be empty):
+{{args}}
+"""

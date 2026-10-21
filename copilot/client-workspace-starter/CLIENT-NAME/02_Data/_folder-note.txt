@@ -1,0 +1,1 @@
+Client data extracts. Store only what the client approved for this platform. Record each file in doc 04, Data received.

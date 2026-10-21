@@ -43,7 +43,7 @@ Ask specific clarifying questions before assuming. Challenge assumptions ("What 
 
 ## Skills
 
-54 skills in `.claude/skills/<name>/SKILL.md`. They load on demand and check workspace context and connected MCPs automatically.
+55 skills in `.claude/skills/<name>/SKILL.md`. They load on demand and check workspace context and connected MCPs automatically.
 
 **Mobilize:** `/proposal-draft` `/problem-statement` `/kickoff-plan` `/stakeholder-map` `/workplan-build` `/data-request` `/connect-mcps`
 
@@ -61,9 +61,11 @@ Ask specific clarifying questions before assuming. Challenge assumptions ("What 
 
 **Close:** `/handover-pack` `/retrospective` `/knowledge-capture`
 
+**Google formats:** `/google-workspace-output` (deliver a model, tracker, or deck as Google Sheets or Slides)
+
 ## MCPs
 
-Connect with `/connect-mcps connect to [tool]` (drive, calendar, chat, spreadsheets, slides, CRM). All skills fall back to context-library files if no MCP is connected. Confirm client IT approval before connecting anything that touches client data.
+Connect with `/connect-mcps connect to [tool]` (Google Drive, Sheets, Slides, calendar, chat, spreadsheets, slides, CRM). All skills fall back to context-library files if no MCP is connected. Confirm client IT approval before connecting anything that touches client data.
 
 **Connected:** _None yet. Run `/connect-mcps` to set up._
 
@@ -77,7 +79,13 @@ Connect with `/connect-mcps connect to [tool]` (drive, calendar, chat, spreadshe
 
 **Templates:** `templates/` holds working templates including `model-starter-template.xlsx` (inputs, calc, scenarios, outputs, checks, log) and `ghost-deck-starter.pptx` (layouts and example pages). Copy them into `outputs/` and work on the copy.
 
-**Building files:** Excel models with openpyxl, recalculated with LibreOffice until zero errors. Decks with pptxgenjs or python-pptx on the client or firm template; native charts. Render to images and check before delivery.
+**Building files:** Check **Preferred output formats** in engagement info first. Default is Office. Excel models with openpyxl, recalculated with LibreOffice until zero errors. Decks with pptxgenjs or python-pptx on the client or firm template; native charts. Render to images and check before delivery.
+
+**Google option:** Models and trackers can be Google Sheets, decks can be Google Slides (`/google-workspace-output`, `advanced/google-workspace-option.md`). Trackers upload as CSV and convert. Models and decks build in place when the Sheets and Slides editor connectors are on; with Drive only, files can be created or converted but not edited, and I ask you to enable the editor instead of making a copy. Use Google for client data only with the client's written approval. Share with named people only.
+
+**Gemini option:** The OS also runs in Gemini with one Gem per client and context and outputs on Google Drive. See `setup/gemini-setup-guide.md` and `gemini/`. It also installs as a Gemini CLI extension (`setup/gemini-cli-extension.md`); edit skills in `.claude/skills/` and rebuild with `python3 gemini/tools/build_extension.py`.
+
+**Copilot option:** The OS also runs in Microsoft 365 Copilot with no agents, using one Copilot Notebook per client and SharePoint or OneDrive folders. See `setup/copilot-setup-guide.md` and `copilot/`.
 
 ## Sub-Agents
 
@@ -117,7 +125,7 @@ On first launch, guide the user through setup:
 1. Fill `context-library/engagement-info-template.md`, `client-stakeholder-template.md`, and `team-roster-template.md`
 2. Add personal context (`personal-context-*.md`) and pick or edit a writing style
 3. Drop existing client materials, data, and past work into `context-library/` subfolders
-4. Connect tools: `/connect-mcps connect to [tool]` (only if the client allows)
+4. Choose output formats (Office or Google) in engagement info, then connect tools: `/connect-mcps connect to [tool]` (only if the client allows)
 5. First action: `/problem-statement`, `/kickoff-plan`, or `/day-one-answer`
 
 Read `context-library/engagement-model/00-overview.md` once for the model behind all of this.

@@ -1,0 +1,7 @@
+description = "Size a market top-down and bottom-up, reconcile the two, and state assumptions and ranges."
+prompt = """
+Activate the `market-sizing` skill with the activate_skill tool and follow it step by step for this task.
+
+Task details from the user (may be empty):
+{{args}}
+"""

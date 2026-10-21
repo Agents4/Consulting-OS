@@ -1,0 +1,7 @@
+description = "Write the SMART key question, scope, success criteria, and constraints for sponsor sign-off in week 1."
+prompt = """
+Activate the `problem-statement` skill with the activate_skill tool and follow it step by step for this task.
+
+Task details from the user (may be empty):
+{{args}}
+"""

@@ -1,0 +1,7 @@
+description = "Log a decision: context, options, choice, owner, date, and what would reverse it."
+prompt = """
+Activate the `decision-doc` skill with the activate_skill tool and follow it step by step for this task.
+
+Task details from the user (may be empty):
+{{args}}
+"""

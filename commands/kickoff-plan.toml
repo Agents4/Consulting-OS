@@ -1,0 +1,7 @@
+description = "Plan the kickoff meeting, pre-day-1 reading, first two weeks, logistics, and team charter conversation."
+prompt = """
+Activate the `kickoff-plan` skill with the activate_skill tool and follow it step by step for this task.
+
+Task details from the user (may be empty):
+{{args}}
+"""

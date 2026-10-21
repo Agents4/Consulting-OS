@@ -1,0 +1,7 @@
+description = "Write a meeting agenda with purpose, decisions, timing, pre-read, and roles."
+prompt = """
+Activate the `meeting-agenda` skill with the activate_skill tool and follow it step by step for this task.
+
+Task details from the user (may be empty):
+{{args}}
+"""
