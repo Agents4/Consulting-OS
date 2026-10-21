@@ -10,7 +10,7 @@ Run Consulting OS in Microsoft 365 Copilot **without creating any agents**. You 
 | Need | What you use instead |
 |---|---|
 | A per-client assistant | A **Copilot Notebook** per client. It answers from only the files you add, and holds custom instructions |
-| Skills and slash commands | 53 **playbooks** inside three Word files in the Notebook. You say "Run the issue-tree playbook" |
+| Skills and slash commands | 54 **playbooks** inside three Word files in the Notebook. You say "Run the issue-tree playbook" |
 | Per-client memory | Six context **Word files** you keep current. Notebook references stay current as the files change |
 | Files written for you | Not available. You copy Copilot's output into Office, save it in the client folder, and paste the context updates it gives you |
 | Reusable commands | **Saved prompts** in the Prompt Gallery, shareable to a Teams team |
@@ -43,7 +43,7 @@ Consulting OS rule 7: client data stays on approved platforms.
 1. In SharePoint (preferred, so the team can share) or OneDrive, create **Consulting Engagements**, and inside it **00_Core** and **Clients**.
 2. Upload the three files in `copilot/knowledge-pack/` to `00_Core`:
    - `CORE-1_Engagement-Model-Frameworks-Standards.docx`
-   - `CORE-2_Playbooks-Mobilize-to-Diagnose.docx` (20 playbooks)
+   - `CORE-2_Playbooks-Mobilize-to-Diagnose.docx` (21 playbooks)
    - `CORE-3_Playbooks-Model-Deck-Rhythm-Close.docx` (33 playbooks)
 3. Also upload `notebook-instructions.md` and `prompt-library.md` from `copilot/` so you have them next time.
 

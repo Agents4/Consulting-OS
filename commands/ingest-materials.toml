@@ -1,0 +1,7 @@
+description = "Ingest new client materials and data: digest each file, find conflicts, and propose approved updates to the fact base, hypotheses, stakeholders, decisions, and risks."
+prompt = """
+Activate the `ingest-materials` skill with the activate_skill tool and follow it step by step for this task.
+
+Task details from the user (may be empty):
+{{args}}
+"""
