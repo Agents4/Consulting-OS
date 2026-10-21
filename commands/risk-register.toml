@@ -1,0 +1,7 @@
+description = "Maintain the engagement risk register and recommendation risks, with heatmap and escalation rules."
+prompt = """
+Activate the `risk-register` skill with the activate_skill tool and follow it step by step for this task.
+
+Task details from the user (may be empty):
+{{args}}
+"""

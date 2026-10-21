@@ -1,0 +1,7 @@
+description = "Independently audit a model: inputs vs sources, formulas, outputs vs benchmark, back-of-envelope, standards."
+prompt = """
+Activate the `model-audit` skill with the activate_skill tool and follow it step by step for this task.
+
+Task details from the user (may be empty):
+{{args}}
+"""

@@ -1,0 +1,7 @@
+description = "Check engagement health: scope, question, hypotheses, team load, client relationship, financials, quality, risks."
+prompt = """
+Activate the `engagement-health-check` skill with the activate_skill tool and follow it step by step for this task.
+
+Task details from the user (may be empty):
+{{args}}
+"""

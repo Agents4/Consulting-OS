@@ -1,0 +1,7 @@
+description = "Run a multi-persona review of any output with the sub-agent reviewers: partner, EM, skeptic, client sponsor, CFO, and QC."
+prompt = """
+Activate the `review-panel` skill with the activate_skill tool and follow it step by step for this task.
+
+Task details from the user (may be empty):
+{{args}}
+"""

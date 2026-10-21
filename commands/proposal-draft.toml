@@ -1,0 +1,7 @@
+description = "Draft an engagement proposal: situation, objectives, approach, team, timeline, fees, and why us. Pursuit phase."
+prompt = """
+Activate the `proposal-draft` skill with the activate_skill tool and follow it step by step for this task.
+
+Task details from the user (may be empty):
+{{args}}
+"""

@@ -1,0 +1,7 @@
+description = "Turn a meeting transcript or rough notes into decisions, actions, owners, and hypothesis updates."
+prompt = """
+Activate the `meeting-notes` skill with the activate_skill tool and follow it step by step for this task.
+
+Task details from the user (may be empty):
+{{args}}
+"""

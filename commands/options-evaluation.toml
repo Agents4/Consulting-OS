@@ -1,0 +1,7 @@
+description = "Define options and criteria, score them consistently, and recommend a choice with trade-offs."
+prompt = """
+Activate the `options-evaluation` skill with the activate_skill tool and follow it step by step for this task.
+
+Task details from the user (may be empty):
+{{args}}
+"""

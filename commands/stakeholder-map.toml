@@ -1,0 +1,7 @@
+description = "Map client stakeholders by influence, stance, and what they need, with a pre-wire and engagement plan."
+prompt = """
+Activate the `stakeholder-map` skill with the activate_skill tool and follow it step by step for this task.
+
+Task details from the user (may be empty):
+{{args}}
+"""

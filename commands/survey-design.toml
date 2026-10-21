@@ -1,0 +1,7 @@
+description = "Design a customer or employee survey: sample, questions, scales, analysis plan, and bias checks."
+prompt = """
+Activate the `survey-design` skill with the activate_skill tool and follow it step by step for this task.
+
+Task details from the user (may be empty):
+{{args}}
+"""

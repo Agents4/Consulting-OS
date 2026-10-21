@@ -1,0 +1,7 @@
+description = "Write the model specification before building: questions, structure, inputs, calculations, outputs, checks, owner."
+prompt = """
+Activate the `model-spec` skill with the activate_skill tool and follow it step by step for this task.
+
+Task details from the user (may be empty):
+{{args}}
+"""

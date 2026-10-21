@@ -1,0 +1,7 @@
+description = "Find root causes of a performance gap using drivers, 5 whys, and data splits; separate cause from symptom."
+prompt = """
+Activate the `root-cause-analysis` skill with the activate_skill tool and follow it step by step for this task.
+
+Task details from the user (may be empty):
+{{args}}
+"""

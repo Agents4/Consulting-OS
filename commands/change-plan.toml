@@ -1,0 +1,7 @@
+description = "Plan adoption: stakeholder groups, what changes, resistance, messages, messengers, and early asks."
+prompt = """
+Activate the `change-plan` skill with the activate_skill tool and follow it step by step for this task.
+
+Task details from the user (may be empty):
+{{args}}
+"""

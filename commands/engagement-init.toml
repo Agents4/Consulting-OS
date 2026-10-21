@@ -1,0 +1,8 @@
+description = "Set up the current folder as an engagement workspace: context-library, outputs, and starter templates."
+prompt = """
+Set up this folder as a Consulting OS engagement workspace. Here is the result of the setup script:
+
+!{bash "$HOME/.gemini/extensions/consulting-os/scripts/init-workspace.sh"}
+
+Now do two things. First, summarize what was created and what already existed. Second, give me the next three steps from Getting Started in the Consulting OS context, and ask me the first question: what is the key question for this engagement?
+"""

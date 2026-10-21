@@ -1,0 +1,7 @@
+description = "Rank candidate analyses by impact on the answer, effort, and data readiness; decide what to run, park, or kill."
+prompt = """
+Activate the `prioritize-analyses` skill with the activate_skill tool and follow it step by step for this task.
+
+Task details from the user (may be empty):
+{{args}}
+"""

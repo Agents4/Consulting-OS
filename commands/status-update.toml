@@ -1,0 +1,7 @@
+description = "Write the weekly status for the sponsor: progress, findings, risks, decisions needed, next steps."
+prompt = """
+Activate the `status-update` skill with the activate_skill tool and follow it step by step for this task.
+
+Task details from the user (may be empty):
+{{args}}
+"""

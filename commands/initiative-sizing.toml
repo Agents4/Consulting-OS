@@ -1,0 +1,7 @@
+description = "Size the value of each initiative: baseline, uplift, flow-through, ramp-up, one-time cost, with ranges and a haircut."
+prompt = """
+Activate the `initiative-sizing` skill with the activate_skill tool and follow it step by step for this task.
+
+Task details from the user (may be empty):
+{{args}}
+"""

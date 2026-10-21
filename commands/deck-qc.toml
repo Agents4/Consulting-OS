@@ -1,0 +1,7 @@
+description = "Production QC: consistency, formatting, titles, sources, spelling, the horizontal flow test, and file hygiene."
+prompt = """
+Activate the `deck-qc` skill with the activate_skill tool and follow it step by step for this task.
+
+Task details from the user (may be empty):
+{{args}}
+"""
