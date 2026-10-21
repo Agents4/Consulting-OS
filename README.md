@@ -5,7 +5,7 @@ An AI copilot for strategy engagements run the way McKinsey, BCG, and Bain run t
 ## Philosophy
 
 - **Context over prompting.** The engagement's question, hypotheses, stakeholders, data, and past decisions live in `context-library/`, so every output sounds like it came from someone on the team.
-- **Workflows, not chat.** 55 slash commands cover the engagement from proposal to handover. Each one builds on the others and routes through the same files.
+- **Workflows, not chat.** 56 slash commands cover the engagement from proposal to handover. Each one builds on the others and routes through the same files.
 - **Answer first, then test it.** Day-1 answer, hypothesis log, ghost deck. Work is organized to prove or kill the answer, not to explore everything.
 - **Numbers tie.** Model checks, tie-out logs, independent audit. A page does not leave the team until every number traces to a source.
 - **You are the owner.** Claude works in the analyst seat: drafts, tests, flags. The consultant, EM, and partner own the recommendation.
@@ -14,11 +14,11 @@ An AI copilot for strategy engagements run the way McKinsey, BCG, and Bain run t
 
 - **Engagement model library** (`context-library/engagement-model/`): roles and team structure, skills by role, lifecycle and gates, tasks by phase, cadence and handoffs, deck and Excel production, support functions and tools, AI in consulting, glossary, sources.
 - **Framework library** (`context-library/frameworks/`): Pyramid Principle and SCQA, issue trees and MECE, hypothesis-driven approach, 7-step problem solving, prioritization, value-driver trees, market sizing, strategy cheatsheet, interviewing, change, storylines.
-- **55 skills** across mobilize, structure, diagnose, model, develop, deck, governance, and close.
+- **56 skills** across mobilize, structure, diagnose, model, develop, deck, governance, and close.
 - **10 reviewer sub-agents:** partner, engagement manager, skeptic, client sponsor, client CFO, model auditor, data scientist, risk and compliance, implementation lead, production QC.
 - **17 templates**, including `model-starter-template.xlsx` and `ghost-deck-starter.pptx`.
 - **Two output paths:** Office files (xlsx, pptx) by default, or Google Sheets and Google Slides. Trackers become Google Sheets from a CSV in one call; models and decks build in place with the Sheets and Slides connectors. See `advanced/google-workspace-option.md`.
-- **Gemini CLI extension:** `gemini extensions install https://github.com/Agents4/Consulting-OS` installs 53 skills, 54 slash commands and the rules into Gemini CLI. See `setup/gemini-cli-extension.md`.
+- **Gemini CLI extension:** `gemini extensions install https://github.com/Agents4/Consulting-OS` installs 54 skills, 55 slash commands and the rules into Gemini CLI. See `setup/gemini-cli-extension.md`.
 - **Gemini option:** Run the OS in Gemini with one Gem per client and context and outputs on Google Drive. Knowledge pack, client Docs kit, Drive folder script and step-by-step guide in `setup/gemini-setup-guide.md` and `gemini/`.
 - **Microsoft Copilot option (no agents needed):** One Copilot Notebook per client, SharePoint or OneDrive client folders, saved prompts, and Copilot in Word, Excel and PowerPoint. Guide in `setup/copilot-setup-guide.md`; assets in `copilot/`.
 - **A worked example** (`context-library/example-engagements/project-northstar-worked-example.md`) for format reference only. It is fictional.
@@ -56,7 +56,7 @@ Claude reads `CLAUDE.md` and learns how to work with you.
 Consulting-OS/
 ├── CLAUDE.md                  # Master instructions
 ├── README.md
-├── .claude/skills/            # 55 slash-command skills
+├── .claude/skills/            # 56 slash-command skills
 ├── sub-agents/                # 10 reviewer personas
 ├── templates/                 # Working templates (md, xlsx, pptx)
 ├── context-library/
@@ -86,7 +86,7 @@ Consulting-OS/
 |---|---|
 | Pursuit and mobilize | `/proposal-draft` `/problem-statement` `/kickoff-plan` `/stakeholder-map` `/workplan-build` `/data-request` `/connect-mcps` |
 | Structure | `/day-one-answer` `/issue-tree` `/hypothesis-draft` `/prioritize-analyses` |
-| Diagnose | `/interview-guide` `/interview-synthesis` `/survey-design` `/fact-base` `/data-exploration` `/market-sizing` `/benchmark-analysis` `/competitive-landscape` `/value-driver-tree` `/root-cause-analysis` |
+| Diagnose | `/ingest-materials` `/interview-guide` `/interview-synthesis` `/survey-design` `/fact-base` `/data-exploration` `/market-sizing` `/benchmark-analysis` `/competitive-landscape` `/value-driver-tree` `/root-cause-analysis` |
 | Model | `/initiative-sizing` `/model-spec` `/model-build` `/model-audit` `/scenario-sensitivity` `/number-tie-out` |
 | Develop and recommend | `/options-evaluation` `/recommendation` `/roadmap-build` `/change-plan` |
 | Storyline and deck | `/storyline` `/ghost-deck` `/slide-draft` `/exec-summary` `/deck-qc` `/final-readout` |

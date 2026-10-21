@@ -146,6 +146,7 @@ One-page fact sheet linked from the model Inputs tab.
 
 **Pulls from:**
 - `/data-exploration` - Reconciled data
+- `/ingest-materials` - Digested client materials and conflicts
 
 ### Handoff Format
 

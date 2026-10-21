@@ -10,7 +10,7 @@ Run Consulting OS in Gemini, with one Gem and one Drive folder per client. Conte
 | | Path A: Gemini app + Gems (recommended) | Path B: command line agent |
 |---|---|---|
 | What it is | One Gem per client in gemini.google.com, with your Drive docs attached as knowledge | Gemini CLI or Antigravity CLI working inside a Drive-synced client folder |
-| Skills | 54 of the 55 skills become "playbooks" in 3 knowledge files (connect-mcps does not apply). Trigger by name | Real skill folders, activated by the agent |
+| Skills | 55 of the 56 skills become "playbooks" in 3 knowledge files (connect-mcps does not apply). Trigger by name | Real skill folders, activated by the agent |
 | Writes to Drive | No. You export and file | Yes, through the synced folder |
 | Best for | Most consultants. No install, works on any device | Power users who want files written for them |
 | Account needed | Any Google account with Gems. Use your approved work account | Paid API key, Gemini Code Assist Standard or Enterprise, or Antigravity CLI (see Path B) |
@@ -34,7 +34,7 @@ Consulting OS rule 7: client data stays on approved platforms. Before you put a 
 1. In Google Drive (work account), create a folder named **Consulting Engagements**. Inside it create **00_Core**.
 2. Upload the three files in `gemini/knowledge-pack/` to `00_Core`. Use the `.docx` versions:
    - `CORE-1_Engagement-Model-Frameworks-Standards.docx` (roles, lifecycle, frameworks, deck and model standards, writing style)
-   - `CORE-2_Playbooks-Mobilize-to-Diagnose.docx` (20 playbooks)
+   - `CORE-2_Playbooks-Mobilize-to-Diagnose.docx` (21 playbooks)
    - `CORE-3_Playbooks-Model-Deck-Rhythm-Close.docx` (34 playbooks)
 3. Optional: right-click each file in Drive, choose Open with Google Docs, then File > Save as Google Docs. A Google Doc stays live if you edit it. An uploaded `.docx` is a static snapshot, which is fine because the core rarely changes.
 4. Upload `gem-instructions.md`, the `client-kit/` folder and `apps-script/NewClientWorkspace.gs` here too, so you have them next time.
@@ -87,7 +87,7 @@ Open `01 Engagement-Brief - [Client]`. Fill in the key question, scope, gates, f
 | Slot | File | Why |
 |---|---|---|
 | 1 | CORE-1 Engagement Model, Frameworks, Standards | How engagements run and how to build well |
-| 2 | CORE-2 Playbooks, Mobilize to Diagnose | 20 task playbooks |
+| 2 | CORE-2 Playbooks, Mobilize to Diagnose | 21 task playbooks |
 | 3 | CORE-3 Playbooks, Model to Close | 34 task playbooks |
 | 4 | 01 Engagement-Brief | Key question, scope, gates, standards |
 | 5 | 02 Stakeholders-and-Team | Who matters and how to engage them |
@@ -140,7 +140,7 @@ Eligible Workspace users can see their Gems in the side panel of Docs, Gmail and
 
 ## Path B: command line agent writing straight into Drive
 
-Use this if you want files written for you. The quickest route is the packaged extension: see `setup/gemini-cli-extension.md` (one install command, 53 skills, 54 slash commands). The manual steps below are the alternative. It needs Drive for desktop so the Drive folder appears on your computer.
+Use this if you want files written for you. The quickest route is the packaged extension: see `setup/gemini-cli-extension.md` (one install command, 54 skills, 55 slash commands). The manual steps below are the alternative. It needs Drive for desktop so the Drive folder appears on your computer.
 
 **Check your access first.** Google announced that Gemini CLI stops serving consumer Google AI Pro, Ultra and free individual users on June 18, 2026, and replaced it for them with the Antigravity CLI. Gemini CLI stays available through paid Gemini API keys and Gemini Code Assist Standard or Enterprise licenses. Antigravity CLI supports Agent Skills, so the skill folders work there too, but Google says feature parity is not 1:1, and the announcement does not mention `GEMINI.md`. Check which CLI your account can use before you install.
 

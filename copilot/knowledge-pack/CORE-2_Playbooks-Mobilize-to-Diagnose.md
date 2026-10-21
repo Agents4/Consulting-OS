@@ -775,6 +775,241 @@ Before delivering, verify:
 
 
 
+## Playbook: Ingest Materials (name: ingest-materials)
+
+### Quick Start
+
+Say: **Run the ingest-materials playbook**
+Then provide (all optional):
+1. **Folders to scan** (default: `context docs/client-materials/` and `context docs/data/`)
+2. **Files to prioritize or skip**
+3. **Depth**: quick scan (digests only) or deep read (digests plus reconciliation)
+
+I will find new and changed files, read each one in any format, write a one-page digest per file, check what it means for what we already know, and propose exact updates to the fact base, hypotheses, stakeholders, decisions, risks, and data requests. Nothing in `context docs/` changes until you approve each file.
+
+**Output:** Delivered in chat. Copy into Word or Excel and file in the client Outputs folder.
+**Time:** ~5 min per document, plus ~15 min for the cross-check and proposal
+
+**When to use:** After you drop files into `client-materials/` or `data/`, after every client data delivery, and before the fact-base playbook, the hypothesis-draft playbook, or a SteerCo
+
+**Phase:** Mobilize through Recommend, and weekly
+
+### Step 1: Diagnostic Questions
+
+Instead of a generic intake, I ask only what the files cannot answer:
+
+#### Question 1: Clearance
+**"Is every file in the list cleared to be read here, under the platforms approved in engagement info?"**
+
+Skip anything marked restricted, or that holds personal data (HR, customer names, health), until you confirm. When in doubt, skip and log it.
+
+#### Question 2: Priority
+**"Which two or three files matter most this week, and which hypothesis or slide do they feed?"**
+
+Read those first and in depth. The rest get a quick scan.
+
+#### Question 3: Depth
+**"Quick scan (digests only) or deep read (digests plus reconciliation to the fact base)?"**
+
+Default to quick scan above 10 files.
+
+---
+
+### The Process
+
+#### Step 1: Inventory and classify
+
+Build one table: file, type (SOW, annual report, board deck, KPI pack, org chart, contract, policy, prior consultant report, data extract, email thread), size, file date, hash, status (new, changed, unchanged, skipped), sensitivity (public, client confidential, restricted), and cleared (yes, no, ask). Show it and confirm before reading.
+
+#### Step 2: Read each file in its own format
+
+- **.md, .txt, .csv:** Read directly. For a CSV, read headers and a sample, never print the whole file.
+- **.docx, .pptx:** Convert with `markitdown` or `pandoc`. Keep slide numbers and speaker notes.
+- **.pdf:** `pdftotext -layout` for text. For scanned pages, render and read them, and mark the figures as lower confidence.
+- **.xlsx:** Use `openpyxl` to list sheets, used ranges, headers, and which cells are formulas. Record sheet and cell references. Do not paste tables. Large datasets go to the data-exploration playbook.
+- **Images and charts:** View them. Read values only where they are printed on the chart.
+- **Email exports (.eml, .msg):** Headers, thread order, and the ask.
+- **Audio and video:** Ask for a transcript. Do not guess.
+- **Google Docs, Sheets, Slides:** Read through the Drive connector only with your approval.
+- **Cannot read it:** Log it as unreadable and say why. Never infer contents from the file name.
+
+#### Step 3: Write one digest per file
+
+Use the digest template below. Rules: every number carries its unit, period, and location (page, slide, sheet and cell). Quotes are exact and carry a location. Mark what the document **claims** versus what the data **shows**. Record the author and the date.
+
+#### Step 4: Cross-check against what we know
+
+For each digest, compare with:
+- **Fact base:** agrees, conflicts, or new for each metric.
+- **Hypotheses:** supports, weakens, or no effect, with strength (strong: client data, validated; medium: partial data or benchmark; weak: opinion or analogy).
+- **Stakeholders:** new names, role changes, stance signals, reporting lines.
+- **Decisions:** definitions or approvals the file implies.
+- **Risks:** data quality, scope, confidentiality, political.
+- **Data requests:** items satisfied, partly satisfied, or newly needed.
+- **Other files:** the same metric with different values. Never pick silently. Show both and ask which the sponsor treats as the source of truth.
+
+#### Step 5: Write the update proposal
+
+One numbered list, grouped by target file. Each update has an ID (U1, U2), the target file and section, the action (add, change, close), the exact text to paste, the evidence (file and location), a confidence, and a decision box (Approve, Edit, Skip). Lead with a "So what" of the three findings that change the answer or the plan.
+
+#### Step 6: Get approval, then apply
+
+Show the proposal and ask which updates to apply. For each approved target:
+1. Write the updated copy of the file to `Client folder 01_Outputs/research-synthesis/ingest-[date]/updates/`, mirroring its path in `context docs/`.
+2. Only after you say "apply" for that specific file, save a copy of the original to `Client folder 01_Outputs/research-synthesis/ingest-[date]/backup/`, then write the update into `context docs/`.
+
+Never apply an update you have not approved, and never delete or overwrite a client file in `client-materials/` or `data/`. If you say "apply all", I still list every file I changed.
+
+#### Step 7: Update the index
+
+Append one row per file to `Client folder 01_Outputs/research-synthesis/ingest-index.md`: path, hash, date ingested, digest path, updates applied. Files you skipped or left unapproved stay marked **pending** so the next run raises them again.
+
+#### Step 8: Hand off
+
+Name the next skills the findings call for, for example the fact-base playbook for a number conflict, the hypothesis-draft playbook for a moved hypothesis, the stakeholder-map playbook for new people, the risk-register playbook for a new risk, the decision-doc playbook for a definition, the data-request playbook for a gap.
+
+---
+
+### Common Mistakes
+
+- **Ingesting everything at once**: Set a priority and a depth first. Ten files read well beat fifty skimmed.
+- **A digest with no locations**: A fact without a page or cell cannot be tied out later.
+- **Picking between conflicting numbers silently**: Show both, ask, and log the decision.
+- **Treating a client claim as data**: Label claims. A slide saying "churn is 5%" is a claim until the data shows it.
+- **Updating the knowledge base without approval**: Proposals first. Edits only on your explicit approval, file by file.
+- **Digesting a big dataset**: Profile it with the data-exploration playbook. Digest what it is and where it lives.
+- **Reading restricted or personal data**: Ask first. Skip and log when unsure.
+
+---
+
+### Structured Output Template
+
+```markdown
+# Digest: [File name]
+
+**Path:** [ ]  |  **Type:** [ ]  |  **Author / source:** [ ]  |  **Date:** [ ]  |  **Sensitivity:** [ ]
+**Read in full:** [Y / partial / N]  |  **Hash:** [first 12 characters]
+
+## What it is and why it matters
+[2 to 3 sentences. Which question or hypothesis it feeds.]
+
+## Key facts
+| ID | Fact | Value | Unit | Period | Location (page / slide / cell) | Claim or data | Confidence |
+|---|---|---|---|---|---|---|---|
+| F1 | | | | | | | |
+
+## Definitions and terms the client uses
+- [Term]: [definition] ([location])
+
+## Quotes worth keeping
+- "[Exact quote]" ([location], [who])
+
+## People and organization
+- [Name, role, what the document says about them or their stance]
+
+## Checks against what we know
+- Fact base: [agrees / conflicts / new, with IDs]
+- Hypotheses: [H#: supports / weakens / no effect, strength]
+- Other files: [conflicts]
+
+## Open questions
+- [ ]
+```
+
+```markdown
+# Ingest Proposal: [Engagement], [date]
+
+**Files read:** [N]  |  **Skipped:** [N, why]  |  **Pending approval:** [N]
+
+## So what
+1. [Finding that changes the answer or the plan]
+2. [ ]
+3. [ ]
+
+## Conflicts to resolve
+| Metric | Source A | Source B | Which does the sponsor treat as correct? |
+|---|---|---|---|
+
+## Proposed updates
+| ID | Target file and section | Action | Exact text | Evidence (file, location) | Confidence | Decision |
+|---|---|---|---|---|---|---|
+| U1 | | add / change / close | | | | Approve / Edit / Skip |
+
+## Next skills
+- [ ]
+```
+
+```markdown
+# Ingest Index
+
+| Path | Hash (12) | Ingested | Digest | Updates applied | Status |
+|---|---|---|---|---|---|
+| | | | | | ingested / pending / skipped / unreadable |
+```
+
+---
+
+### Output Integration
+
+#### Cross-Skill Integration
+
+**Feeds into:**
+- the fact-base playbook - New and conflicting numbers
+- the hypothesis-draft playbook - Evidence for and against
+- the stakeholder-map playbook - People and stance signals
+- the risk-register playbook - New risks
+- the decision-doc playbook - Definitions to agree
+- the data-request playbook - Requests closed and opened
+
+**Pulls from:**
+- the data-request playbook - What was asked for
+- the hypothesis-draft playbook - What the evidence has to test
+- the fact-base playbook - Numbers already agreed
+
+When this output goes to a teammate or reviewer, attach a handoff cover note: Brief, Backup, So-what, Ask. Never send a page without all four.
+
+---
+
+### Output Quality Self-Check
+
+Before delivering, verify:
+
+- [ ] **Every file** is accounted for: read, skipped with a reason, or unreadable
+- [ ] **Clearance** checked before reading each file
+- [ ] **Every number** has a unit, a period, and a location
+- [ ] **Quotes** are exact and located
+- [ ] **Claims and data** are labeled apart
+- [ ] **Conflicts** are shown with both values, not resolved silently
+- [ ] **Each proposed update** has exact text, evidence, and a decision box
+- [ ] **No file in `context docs/`** changed without your approval for that file, and a backup exists for each
+- [ ] **Index** updated, with pending files marked
+- [ ] **Answer first**: the so-what leads, the detail follows
+- [ ] **Sourced**: every number and claim has a source or is marked as an assumption
+- [ ] **Voice**: no em dashes; none of delve, leverage, utilize, unlock, harness, streamline, robust, cutting-edge
+
+---
+
+### Related Skills
+
+- `fact-base` - Agree one number per metric
+- `data-exploration` - Profile large datasets
+- `hypothesis-draft` - Update the hypothesis log
+- `stakeholder-map` - Update people and stance
+- `risk-register` - Log new risks
+- `decision-doc` - Log definitions
+- `data-request` - Close and open requests
+- `interview-synthesis` - Same method for interview notes
+
+
+## How this playbook works in Copilot
+
+Add each new file to the Notebook as a reference, then say: Run the ingest-materials playbook on [file names]. There is no file hashing here. Treat a file as new when its name and modified date are not in the ingest index doc. Read each file as provided, write one digest per file, and end with the update proposal (U1, U2 and so on). I cannot write to your files, so each approved update comes back as a CONTEXT UPDATES block: the target context doc, the section, and the exact text to paste. Paste approved updates yourself, then add the ingested files to the ingest index doc.
+
+---
+
+
+
+
 ## Playbook: Day-One Answer (name: day-one-answer)
 
 ### Quick Start
@@ -1109,6 +1344,7 @@ Update the Day-1 answer if a key hypothesis moves.
 **Pulls from:**
 - the issue-tree playbook - Leaf structure
 - the interview-synthesis playbook - Evidence
+- the ingest-materials playbook - New evidence and conflicts from client materials
 
 When this output goes to a teammate or reviewer, attach a handoff cover note: Brief, Backup, So-what, Ask. Never send a page without all four.
 
@@ -1705,6 +1941,7 @@ One-page fact sheet linked from the model Inputs tab.
 
 **Pulls from:**
 - the data-exploration playbook - Reconciled data
+- the ingest-materials playbook - Digested client materials and conflicts
 
 When this output goes to a teammate or reviewer, attach a handoff cover note: Brief, Backup, So-what, Ask. Never send a page without all four.
 
