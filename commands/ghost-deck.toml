@@ -1,0 +1,7 @@
+description = "Create a ghost deck: empty slides with action titles, chart sketches, and data needs, before analysis finishes."
+prompt = """
+Activate the `ghost-deck` skill with the activate_skill tool and follow it step by step for this task.
+
+Task details from the user (may be empty):
+{{args}}
+"""

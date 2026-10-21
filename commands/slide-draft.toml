@@ -1,0 +1,7 @@
+description = "Draft a single slide: action title, chart choice, layout, callouts, source line, and speaker notes."
+prompt = """
+Activate the `slide-draft` skill with the activate_skill tool and follow it step by step for this task.
+
+Task details from the user (may be empty):
+{{args}}
+"""

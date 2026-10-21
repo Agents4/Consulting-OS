@@ -1,0 +1,7 @@
+description = "Profile and clean client data: completeness, outliers, definitions, reconciliations to reported figures."
+prompt = """
+Activate the `data-exploration` skill with the activate_skill tool and follow it step by step for this task.
+
+Task details from the user (may be empty):
+{{args}}
+"""

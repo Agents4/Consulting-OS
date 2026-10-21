@@ -140,7 +140,7 @@ Eligible Workspace users can see their Gems in the side panel of Docs, Gmail and
 
 ## Path B: command line agent writing straight into Drive
 
-Use this if you want files written for you. It needs Drive for desktop so the Drive folder appears on your computer.
+Use this if you want files written for you. The quickest route is the packaged extension: see `setup/gemini-cli-extension.md` (one install command, 53 skills, 54 slash commands). The manual steps below are the alternative. It needs Drive for desktop so the Drive folder appears on your computer.
 
 **Check your access first.** Google announced that Gemini CLI stops serving consumer Google AI Pro, Ultra and free individual users on June 18, 2026, and replaced it for them with the Antigravity CLI. Gemini CLI stays available through paid Gemini API keys and Gemini Code Assist Standard or Enterprise licenses. Antigravity CLI supports Agent Skills, so the skill folders work there too, but Google says feature parity is not 1:1, and the announcement does not mention `GEMINI.md`. Check which CLI your account can use before you install.
 

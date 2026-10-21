@@ -1,0 +1,7 @@
+description = "Tie every number on a deck to its source or model cell, log it, and flag mismatches before review."
+prompt = """
+Activate the `number-tie-out` skill with the activate_skill tool and follow it step by step for this task.
+
+Task details from the user (may be empty):
+{{args}}
+"""

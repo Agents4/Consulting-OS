@@ -1,0 +1,7 @@
+description = "Build the storyline: governing thought, key lines, dot-dash page logic, using Pyramid Principle and SCQA."
+prompt = """
+Activate the `storyline` skill with the activate_skill tool and follow it step by step for this task.
+
+Task details from the user (may be empty):
+{{args}}
+"""

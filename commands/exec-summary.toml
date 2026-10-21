@@ -1,0 +1,7 @@
+description = "Write the executive summary page: answer, prize, three reasons, risks, ask. Must stand alone."
+prompt = """
+Activate the `exec-summary` skill with the activate_skill tool and follow it step by step for this task.
+
+Task details from the user (may be empty):
+{{args}}
+"""

@@ -1,0 +1,7 @@
+description = "Build a MECE issue tree from the key question, tag branches with hypotheses and analyses."
+prompt = """
+Activate the `issue-tree` skill with the activate_skill tool and follow it step by step for this task.
+
+Task details from the user (may be empty):
+{{args}}
+"""

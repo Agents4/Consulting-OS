@@ -18,6 +18,7 @@ An AI copilot for strategy engagements run the way McKinsey, BCG, and Bain run t
 - **10 reviewer sub-agents:** partner, engagement manager, skeptic, client sponsor, client CFO, model auditor, data scientist, risk and compliance, implementation lead, production QC.
 - **17 templates**, including `model-starter-template.xlsx` and `ghost-deck-starter.pptx`.
 - **Two output paths:** Office files (xlsx, pptx) by default, or Google Sheets and Google Slides. Trackers become Google Sheets from a CSV in one call; models and decks build in place with the Sheets and Slides connectors. See `advanced/google-workspace-option.md`.
+- **Gemini CLI extension:** `gemini extensions install https://github.com/Agents4/Consulting-OS` installs 53 skills, 54 slash commands and the rules into Gemini CLI. See `setup/gemini-cli-extension.md`.
 - **Gemini option:** Run the OS in Gemini with one Gem per client and context and outputs on Google Drive. Knowledge pack, client Docs kit, Drive folder script and step-by-step guide in `setup/gemini-setup-guide.md` and `gemini/`.
 - **Microsoft Copilot option (no agents needed):** One Copilot Notebook per client, SharePoint or OneDrive client folders, saved prompts, and Copilot in Word, Excel and PowerPoint. Guide in `setup/copilot-setup-guide.md`; assets in `copilot/`.
 - **A worked example** (`context-library/example-engagements/project-northstar-worked-example.md`) for format reference only. It is fictional.
@@ -72,6 +73,7 @@ Consulting-OS/
 │       decisions/ meetings/ research/ data/ client-materials/
 │       stakeholders/ other/    # Your files (empty at start)
 ├── outputs/                   # Everything Claude writes
+├── gemini-extension.json      # Gemini CLI extension manifest (with GEMINI.md, skills/, commands/, scripts/)
 ├── gemini/                    # Gemini option: Gem instructions, knowledge pack, client Docs kit, Drive folder script, CLI context file
 ├── copilot/                   # Copilot option: Notebook instructions, prompt library, playbook pack, client Word and Excel starter zip
 ├── setup/                     # Installation, first-session checklist, Gemini and Copilot setup guides

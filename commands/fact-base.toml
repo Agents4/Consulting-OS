@@ -1,0 +1,7 @@
+description = "Assemble the baseline fact base: current performance, definitions, and the one set of numbers the team uses."
+prompt = """
+Activate the `fact-base` skill with the activate_skill tool and follow it step by step for this task.
+
+Task details from the user (may be empty):
+{{args}}
+"""

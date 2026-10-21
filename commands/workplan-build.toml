@@ -1,0 +1,7 @@
+description = "Build a hypothesis-driven workplan: modules, tasks, owners, dates, dependencies, gates."
+prompt = """
+Activate the `workplan-build` skill with the activate_skill tool and follow it step by step for this task.
+
+Task details from the user (may be empty):
+{{args}}
+"""

@@ -1,0 +1,7 @@
+description = "Draft a client email: status, request, escalation, or thank-you, in the right tone and length."
+prompt = """
+Activate the `client-update-email` skill with the activate_skill tool and follow it step by step for this task.
+
+Task details from the user (may be empty):
+{{args}}
+"""

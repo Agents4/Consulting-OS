@@ -1,0 +1,7 @@
+description = "Map competitors, positioning, and moves relevant to the key question, with sources."
+prompt = """
+Activate the `competitive-landscape` skill with the activate_skill tool and follow it step by step for this task.
+
+Task details from the user (may be empty):
+{{args}}
+"""

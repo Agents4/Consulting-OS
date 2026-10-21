@@ -1,0 +1,7 @@
+description = "Build the Excel model from the spec: separate inputs, calculations, outputs; formulas only; checks that pass."
+prompt = """
+Activate the `model-build` skill with the activate_skill tool and follow it step by step for this task.
+
+Task details from the user (may be empty):
+{{args}}
+"""

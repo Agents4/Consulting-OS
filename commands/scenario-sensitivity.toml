@@ -1,0 +1,7 @@
+description = "Design scenarios and sensitivities, run them, and show which assumptions move the answer most."
+prompt = """
+Activate the `scenario-sensitivity` skill with the activate_skill tool and follow it step by step for this task.
+
+Task details from the user (may be empty):
+{{args}}
+"""

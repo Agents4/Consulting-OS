@@ -1,0 +1,7 @@
+description = "Compare the client to peers on selected metrics, normalize for comparability, and size the gap."
+prompt = """
+Activate the `benchmark-analysis` skill with the activate_skill tool and follow it step by step for this task.
+
+Task details from the user (may be empty):
+{{args}}
+"""

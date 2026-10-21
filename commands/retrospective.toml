@@ -1,0 +1,7 @@
+description = "Run an engagement retrospective: outcomes, estimates vs actuals, handoff quality, tooling, learnings."
+prompt = """
+Activate the `retrospective` skill with the activate_skill tool and follow it step by step for this task.
+
+Task details from the user (may be empty):
+{{args}}
+"""
