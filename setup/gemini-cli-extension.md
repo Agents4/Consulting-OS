@@ -1,6 +1,6 @@
 # Consulting OS as a Gemini CLI Extension
 
-Install the whole OS into Gemini CLI with one command. You get 54 skills, 55 slash commands, the engagement rules, review personas, frameworks, and model and deck templates. Your engagement files stay in your own folder, one folder per client.
+Install the whole OS into Gemini CLI with one command. You get 55 skills, 56 slash commands, the engagement rules, review personas, frameworks, and model and deck templates. Your engagement files stay in your own folder, one folder per client.
 
 **Tested:** the extension passes `gemini extensions validate` and installs from a local copy on Gemini CLI 0.65.0, and the CLI lists all 53 skills (the first build, before `/ingest-materials`) and the context file. I did not run a live model session (it needs your sign-in), and I did not test the install from GitHub. Try one skill after you install it and tell me what breaks.
 
@@ -15,9 +15,9 @@ npm install -g @google/gemini-cli          # Node.js 20 or later
 gemini extensions install https://github.com/Agents4/Consulting-OS
 ```
 
-Until the extension branch is merged to main, add `--ref=gemini-cli-extension`. To pin a release later, use a tag such as `--ref=v1.1.0`.
+Until the extension branch is merged to main, add `--ref=gemini-cli-extension`. To pin a release later, use a tag such as `--ref=v1.2.0`.
 
-Check it: `gemini extensions list` shows `consulting-os`. Inside `gemini`, `/skills list` shows 54 skills and `/memory show` shows the context file.
+Check it: `gemini extensions list` shows `consulting-os`. Inside `gemini`, `/skills list` shows 55 skills and `/memory show` shows the context file.
 
 Update with `gemini extensions update consulting-os`.
 
@@ -36,8 +36,8 @@ Everything the OS writes goes to `outputs/` in that folder. Close the session, o
 | Piece | Where it lives |
 |---|---|
 | Rules, voice, skill list, path map | `GEMINI.md` in the extension. Loaded every session |
-| 54 skills | `skills/<name>/SKILL.md`. Gemini activates one when a task matches |
-| 55 slash commands | `commands/<name>.toml`. `/issue-tree` activates the issue-tree skill. `/engagement-init` runs the setup script |
+| 55 skills | `skills/<name>/SKILL.md`. Gemini activates one when a task matches |
+| 56 slash commands | `commands/<name>.toml`. `/issue-tree` activates the issue-tree skill. `/engagement-init` runs the setup script |
 | Frameworks, engagement model, templates, review personas | The extension folder, `~/.gemini/extensions/consulting-os/`. Read-only |
 | Client context and outputs | Your client folder: `context-library/` and `outputs/` |
 
@@ -67,7 +67,7 @@ If you develop with `gemini extensions link`, note that a linked extension keeps
 
 1. The repo must be public, and `gemini-extension.json` must be at its root. Both are true for `Agents4/Consulting-OS` once this branch is merged.
 2. Add the GitHub topic `gemini-cli-extension`.
-3. Tag a release that matches the manifest version, for example `v1.1.0`.
+3. Tag a release that matches the manifest version, for example `v1.2.0`.
 4. Google's crawler checks tagged repos daily and lists those that pass validation.
 
 The repo holds no client data. Keep it that way: never commit `context-library/data/` or `client-materials/` from a real engagement (the `.gitignore` already excludes them).

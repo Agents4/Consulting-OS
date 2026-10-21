@@ -1010,6 +1010,228 @@ Add each new file to the Notebook as a reference, then say: Run the ingest-mater
 
 
 
+## Playbook: Research Plan (name: research-plan)
+
+### Quick Start
+
+Say: **Run the research-plan playbook**
+Then provide:
+1. **The question or hypothesis** the research must help answer (or let me pull it from the hypothesis log)
+2. **The decision or slide it feeds**
+3. **Time box and depth**: quick (about 10 searches), standard (about 25), or deep (50 or more)
+
+I will turn the question into a short list of research questions, map the best sources for each, and show you the plan before I search. After you approve it, I run the searches, log every source with a grade, and write a synthesis that says what moved and what is still open.
+
+**Output:** Delivered in chat. Copy into Word or Excel and file in the client Outputs folder.
+**Time:** ~10 min to plan, plus ~30 min to run a standard pass
+
+**When to use:** Before the competitive-landscape playbook, the market-sizing playbook, or the benchmark-analysis playbook when the question is open; whenever a hypothesis needs outside evidence; when the sponsor asks "what do we know about X?"
+
+**Phase:** Diagnose
+
+### Step 1: Diagnostic Questions
+
+#### Question 1: The decision
+**"What decision or slide does this research feed, and what would change your mind?"**
+
+Research with no decision behind it becomes a reading list. Name the hypothesis and the result that would weaken it.
+
+#### Question 2: The confidentiality line
+**"Is there anything I must keep out of search queries?"**
+
+Default: no client name, no project code name, no internal figures, no names of people we interviewed. Search on the market, the competitor set, or the metric, never on the client's situation.
+
+#### Question 3: Depth and stop rule
+**"Quick, standard, or deep? And when do we stop?"**
+
+Default stop rule: stop a research question when two independent sources of grade A or B agree, or when the time box ends. Report what is still open.
+
+---
+
+### The Process
+
+#### Phase A: Plan (show it, get approval, then search)
+
+**1. Turn the question into research questions.** Five to seven at most. Each one is specific and answerable: "What share of [segment] bookings went through [channel] in the last two full years?" beats "Understand the channel landscape." For each, write the hypothesis it tests and the result that would weaken it.
+
+**2. Map the sources.** For each research question, list the best source types in order, and why:
+- **Grade A, primary:** regulator filings, annual reports and 10-Ks, statistical agencies, company investor decks, court records, standards bodies, official price lists
+- **Grade B, reputable secondary:** industry associations, major business press, peer-reviewed research, analyst summaries with stated method
+- **Grade C, weak:** vendor blogs, press releases without data, unsourced listicles, opinion, forums. Use only to find a lead, never as the proof of a number.
+
+**3. Draft the search plan.** For each question: three to five queries, the sites or publishers to favor, and the date window. Prefer primary sources and add the year to queries about current facts.
+
+**4. Set the budget.** Searches and page fetches allowed, time box, and the stop rule.
+
+**5. Run the confidentiality check.** Read every draft query. Remove client identifiers. If web tools are not approved for this engagement, stop and say so.
+
+**6. Show the plan** as the table below and ask for approval or edits before running anything.
+
+#### Phase B: Run
+
+**7. Search in batches by research question.** Send independent searches together. Read the result list, then fetch the pages that look primary. Read the page itself, not just the snippet.
+
+**8. Log every source you use** in the source log: ID (S1, S2), URL, publisher, author or body, publication date, date accessed, source type, and grade (A, B, C).
+
+**9. Record each finding as a claim.** One line each: the claim, the number with unit and period, the source ID and location (section, table, page), and a status:
+- **Sourced:** stated in a grade A or B source
+- **Corroborated:** two independent sources agree
+- **Inferred:** our calculation from sourced inputs (show the inputs)
+- **Unverified:** single weak source, or conflicting sources
+
+Any number that drives the answer needs two independent sources, or it is flagged single-source.
+
+**10. Check recency.** For any "current" fact (a price, a rank, a share, a rule in force), find the date. If the newest source is more than 12 months old, say so on the claim.
+
+**11. Handle conflicts and walls.** When sources disagree, show both values and the reason they may differ (definition, period, scope). Do not pick silently. When a page is paywalled, blocked, or will not load, log it as unreachable and ask you to supply the file. Do not try to get around it.
+
+**12. Stop** by the stop rule. List what is still open.
+
+#### Phase C: Synthesize
+
+**13. Write the answer first.** Three sentences: what we learned, what it means for the hypothesis, and what we still do not know.
+
+**14. Findings by research question,** each with its claims, grades, and the effect on the hypothesis (supports, weakens, no effect) with strength: strong (grade A, corroborated), medium (grade B or one A), weak (grade C or inferred).
+
+**15. Close the gaps.** For each open item name the next move: an expert interview (the interview-guide playbook), a client data request (the data-request playbook), a model run, or park it.
+
+**16. Hand off.** Propose the updates to the hypothesis log, fact base, and risk register as a list. Apply nothing to `context docs/` yourself.
+
+---
+
+### Common Mistakes
+
+- **Searching before planning**: Twenty random searches produce a pile, not an answer. Write the research questions first.
+- **Putting client details in a query**: Search the market, never the client. Check every query.
+- **Trusting the snippet**: Open the page. Snippets drop the period, the unit, and the caveat.
+- **Treating a vendor claim as a fact**: A press release saying "40% savings" is a claim from an interested party. Grade it C.
+- **One source for a number that drives the answer**: Find a second independent source or flag it.
+- **Mixing definitions**: Two "market size" figures often differ in scope or year. Compare the definitions before the numbers.
+- **Stale facts stated as current**: Date every current-state claim.
+- **Researching what the client already told us**: Read the ingest digests first.
+- **Never stopping**: Use the stop rule. Report the open items instead of searching forever.
+
+---
+
+### Structured Output Template
+
+```markdown
+# Research Plan: [Topic], [date]
+
+## So what
+[Question, decision it feeds, depth, time box, and what would change our mind]
+
+## Research questions
+| ID | Research question | Hypothesis tested | Result that would weaken it | Source types (grade) | Queries | Date window |
+|---|---|---|---|---|---|---|
+| R1 | | H1 | | A: ; B: | | |
+
+## Budget and stop rule
+[Searches, fetches, time box, stop rule]
+
+## Confidentiality check
+[Terms kept out of queries; web tools approved: yes/no]
+
+## Decision needed
+[Approve / edit / cut]
+```
+
+```markdown
+# Research: [Topic], [date]
+
+## So what
+[Three sentences: what we learned, effect on the hypothesis, what is still open]
+
+## Findings
+### R1: [Research question]
+**Effect on H1:** [supports / weakens / no effect], [strong / medium / weak]
+| Claim | Number, unit, period | Source ID and location | Status |
+|---|---|---|---|
+| | | S1, p. | sourced |
+
+## Conflicts
+[Both values, likely reason, who should rule]
+
+## Still open
+| Item | Next move | Owner |
+|---|---|---|
+
+## Proposed updates
+[Hypothesis log, fact base, risk register: exact text, evidence, confidence]
+
+## Source log
+| ID | URL | Publisher | Date published | Date accessed | Type | Grade |
+|---|---|---|---|---|---|---|
+| S1 | | | | | | A |
+
+## Unreachable
+[Pages that were blocked or paywalled, and what we needed from them]
+```
+
+---
+
+### Output Integration
+
+#### Cross-Skill Integration
+
+**Feeds into:**
+- the competitive-landscape playbook, the market-sizing playbook, the benchmark-analysis playbook - Sourced inputs
+- the hypothesis-draft playbook - Evidence for and against
+- the fact-base playbook - External numbers with grades
+- the interview-guide playbook - Questions the web could not answer
+- the data-request playbook - Client data the research showed we need
+- the risk-register playbook - Risks the research surfaced
+
+**Pulls from:**
+- the hypothesis-draft playbook - What needs outside evidence
+- the ingest-materials playbook - What the client already told us
+- the fact-base playbook - Numbers already agreed
+
+When this output goes to a teammate or reviewer, attach a handoff cover note: Brief, Backup, So-what, Ask. Never send a page without all four.
+
+---
+
+### Output Quality Self-Check
+
+Before delivering, verify:
+
+- [ ] **Plan approved** before any search ran
+- [ ] **Every research question** ties to a hypothesis and a decision
+- [ ] **No client identifiers** appear in any query
+- [ ] **Every source** is in the log with URL, date published, date accessed, and a grade
+- [ ] **Every number** has a unit, a period, and a source location
+- [ ] **Numbers that drive the answer** have two independent sources, or are flagged single-source
+- [ ] **Current-state claims** carry a date
+- [ ] **Conflicts** are shown with both values
+- [ ] **Blocked pages** are logged as unreachable, not worked around
+- [ ] **Open items** each have a next move
+- [ ] **Answer first**: the so-what leads, the detail follows
+- [ ] **Sourced**: every claim has a source or is marked inferred or unverified
+- [ ] **Voice**: no em dashes; none of delve, leverage, utilize, unlock, harness, streamline, robust, cutting-edge
+
+---
+
+### Related Skills
+
+- `competitive-landscape` - Map competitors once the facts are in
+- `market-sizing` - Size the market from sourced inputs
+- `benchmark-analysis` - Compare to peers
+- `hypothesis-draft` - Update the hypothesis log
+- `ingest-materials` - Digest what the client gave us
+- `interview-guide` - Cover what the web cannot
+- `data-request` - Ask the client for what only they hold
+- `fact-base` - Agree one number per metric
+
+
+## How this playbook works in Copilot
+
+Use the web search this chat provides. If web search is off or not approved for this client, deliver the research plan only and stop before searching. Keep client names and internal figures out of every query. Give the source log with full URLs so the team can check each one. Save the plan and findings in the client Outputs folder.
+
+---
+
+
+
+
 ## Playbook: Day-One Answer (name: day-one-answer)
 
 ### Quick Start
@@ -1345,6 +1567,7 @@ Update the Day-1 answer if a key hypothesis moves.
 - the issue-tree playbook - Leaf structure
 - the interview-synthesis playbook - Evidence
 - the ingest-materials playbook - New evidence and conflicts from client materials
+- the research-plan playbook - Sourced outside evidence, graded
 
 When this output goes to a teammate or reviewer, attach a handoff cover note: Brief, Backup, So-what, Ask. Never send a page without all four.
 

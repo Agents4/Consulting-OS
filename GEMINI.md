@@ -53,13 +53,13 @@ Ask specific clarifying questions before assuming. Challenge assumptions ("What 
 
 ## Skills
 
-56 skills in `.claude/skills/<name>/SKILL.md`. They load on demand and check workspace context and connected MCPs automatically.
+55 skills ship with this extension. Gemini activates a skill when a task matches it, and every skill is also a slash command (for example `/issue-tree`). Skills check workspace context and connected tools automatically. `/engagement-init` scaffolds a new engagement folder.
 
 **Mobilize:** `/proposal-draft` `/problem-statement` `/kickoff-plan` `/stakeholder-map` `/workplan-build` `/data-request`
 
 **Structure the problem:** `/day-one-answer` `/issue-tree` `/hypothesis-draft` `/prioritize-analyses`
 
-**Diagnose:** `/ingest-materials` `/interview-guide` `/interview-synthesis` `/survey-design` `/fact-base` `/data-exploration` `/market-sizing` `/benchmark-analysis` `/competitive-landscape` `/value-driver-tree` `/root-cause-analysis`
+**Diagnose:** `/ingest-materials` `/research-plan` `/interview-guide` `/interview-synthesis` `/survey-design` `/fact-base` `/data-exploration` `/market-sizing` `/benchmark-analysis` `/competitive-landscape` `/value-driver-tree` `/root-cause-analysis`
 
 **Model:** `/initiative-sizing` `/model-spec` `/model-build` `/model-audit` `/scenario-sensitivity` `/number-tie-out`
 
@@ -78,11 +78,11 @@ All skills work without connected tools. To add live access, install an extensio
 
 **Connected:** _None yet._
 
-**Query routing:** Client data → data room or `context-library/data/`. Market and competitors → web search, then `context-library/research/`. Interviews → `context-library/interviews/`. Models → `context-library/models/`. Decisions → `context-library/decisions/`.
+**Query routing:** Client data → data room or `context-library/data/`. Market and competitors → `/research-plan` (plan, then web search), then `context-library/research/`. Interviews → `context-library/interviews/`. Models → `context-library/models/`. Decisions → `context-library/decisions/`.
 
 ## File Creation
 
-**CRITICAL: Gemini writes ALL new files to `outputs/`. Never write to `context-library/` directly. The user moves finalized work there manually.** Exceptions, each only with the user's explicit approval: the learning log, edits to this file, and `/ingest-materials` updates to named `context-library/` files (approved one file at a time, with a backup of the original saved in `outputs/` first).
+**CRITICAL: Write ALL new files to `outputs/` in the user's current workspace folder. Never write to `context-library/` directly, and never write inside the extension folder. The user moves finalized work into `context-library/` manually.** Exceptions, each only with the user's explicit approval: the learning log, and `/ingest-materials` updates to named workspace `context-library/` files (approved one file at a time, with a backup of the original saved in `outputs/` first).
 
 `outputs/` subfolders: `proposals/` · `problem-statements/` · `kickoff/` · `stakeholder-maps/` · `workplans/` · `data-requests/` · `issue-trees/` · `hypotheses/` · `interviews/` · `research-synthesis/` · `analyses/` · `models/` · `storylines/` · `ghost-decks/` · `decks/` · `reviews/` · `steerco/` · `status-updates/` · `meeting-notes/` · `decisions/` · `recommendations/` · `roadmaps/` · `transition/` · `retros/` · `daily-plans/` · `weekly-plans/` · `weekly-reviews/` · `team-messages/` · `workshops/` · `mcp-integration-logs/` · `skill-test-results/`
 
