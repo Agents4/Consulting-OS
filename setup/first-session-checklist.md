@@ -36,6 +36,12 @@ Check that outputs land in `outputs/` and that no em dashes appear.
 - [ ] Run `/storyline` then `/ghost-deck`
 - [ ] Open `templates/ghost-deck-starter.pptx` and review the layouts
 
+## Step 5b (optional): Google Sheets and Slides
+- [ ] Set **Preferred output formats** in engagement info
+- [ ] If using Google, confirm client approval for client data
+- [ ] Make Google copies of the two starters (`templates/google-workspace-starters.md`)
+- [ ] Run `/google-workspace-output` to create a tracker as a Google Sheet from a CSV
+
 ## Step 6: Review
 - [ ] Run `/review-panel` on the ghost deck
 - [ ] Add one correction and say "Add a rule so you don't do that again" to test the learning loop

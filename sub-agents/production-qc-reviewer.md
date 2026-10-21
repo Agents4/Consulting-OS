@@ -66,3 +66,12 @@ You are the graphics and production lead who does the last pass on important dec
 ```
 
 **Your goal:** Nothing silly reaches the CEO.
+
+## If the Deck Is Google Slides
+- [ ] Theme fonts applied; no substituted fonts
+- [ ] No empty placeholder prompts
+- [ ] Linked charts updated; chart titles off, labels in text boxes
+- [ ] Comments resolved and suggestions handled
+- [ ] Speaker notes clean
+- [ ] Version named; PDF exported and every page looked at
+- [ ] Sharing set to named people

@@ -23,3 +23,6 @@ How Consulting OS builds the two core artifacts.
 
 ## What Claude Does Not Replace
 Firm-specific think-cell charts, brand templates behind a login, and partner judgment. Hand those steps to the production team or to you.
+
+## Google Sheets and Slides Instead
+If the engagement uses Google Workspace, models and trackers can be Google Sheets and decks can be Google Slides. The standards stay the same; the build steps change (no recalc, linked charts, version history). See `google-workspace-option.md` and run `/google-workspace-output`.

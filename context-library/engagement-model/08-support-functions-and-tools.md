@@ -40,3 +40,6 @@
 
 ## Where Claude Fits
 In Consulting-OS, Claude covers much of the research, first-draft analysis, notes, formatting, and review work that used to go to analysts and production support. Use it for speed and breadth. Keep humans accountable for the answer, the numbers, and anything client-confidential. See `09-ai-in-consulting-2026.md`.
+
+## Google Workspace Option
+Where the client or firm works in Google Workspace, Claude can create and convert files through the Drive connector and edit them in place through the Sheets and Slides editor connectors. It is a platform choice like any other: it needs the client's written approval for client data, named-person sharing, and files owned in a firm shared drive. See `advanced/google-workspace-option.md`.

@@ -48,6 +48,8 @@ Fill this in once at kickoff. Every skill reads it first. Update it at each gate
 
 **Firm / team style:** [McKinsey-style / BCG-style / Bain-style / Other / Client in-house]
 **Title map in use:** [Default generic / Firm-specific]
+**Preferred output formats:** Models and trackers: [ ] Excel (xlsx) [ ] Google Sheets · Decks: [ ] PowerPoint (pptx) [ ] Google Slides · Memos: [ ] Markdown [ ] Google Docs
+**Approved platforms for client data:** [ ] Client data room [ ] Firm Drive [ ] Google Workspace (written approval: [where recorded]) [ ] Local only
 **Deck template:** [Path or "client master" or "firm master"]
 **Deck conventions:** Action title max [15] words · fonts [ ] · colors [ ] · source line format [ ]
 **Model conventions:** Input color [blue] · Formula color [black] · Link color [green] · Check color [ ] · Units convention [ ]

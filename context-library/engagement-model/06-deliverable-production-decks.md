@@ -140,3 +140,6 @@ Every number on a slide traces to a cell in the model. The deck owner keeps a **
 
 ## Versioning and Naming
 `[Client]_[Deck]_[Audience]_[vYYMMDD]_[status]` (for example, `Northstar_SteerCo3_Sponsors_v261016_DRAFT`). One master; no copies on desktops; freeze a PDF when sent.
+
+## Variant: Google Slides
+Some teams, and many clients, work in Google Slides. The storyline, action titles, one-message-per-page rule, and number tie-out are identical. What changes: no think-cell, so charts are built on the model's Outputs tab and embedded as linked charts (they tie to the model by construction, but typed titles and callouts still need tie-out); theme and master are set once by hand; Slides never shrinks text; images need a public URL or a copy from the template. Freeze by updating linked charts, resolving comments, naming a version, and exporting PDF. Details: `advanced/google-workspace-option.md`.
