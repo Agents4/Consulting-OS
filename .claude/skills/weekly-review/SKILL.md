@@ -1,6 +1,6 @@
 ---
 name: weekly-review
-description: Review the week: progress, what worked, what slipped, learning log, and next week's priorities.
+description: "Review the week: progress, what worked, what slipped, learning log, and next week's priorities."
 disable-model-invocation: false
 user-invocable: true
 ---

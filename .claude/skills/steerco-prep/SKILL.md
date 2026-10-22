@@ -1,6 +1,6 @@
 ---
 name: steerco-prep
-description: Prepare a Steering Committee: agenda, pre-read, pre-wires, decisions needed, Q&A rehearsal.
+description: "Prepare a Steering Committee: agenda, pre-read, pre-wires, decisions needed, Q&A rehearsal."
 disable-model-invocation: false
 user-invocable: true
 ---

@@ -1,6 +1,6 @@
 ---
 name: survey-design
-description: Design a customer or employee survey: sample, questions, scales, analysis plan, and bias checks.
+description: "Design a customer or employee survey: sample, questions, scales, analysis plan, and bias checks."
 disable-model-invocation: false
 user-invocable: true
 ---

@@ -1,6 +1,6 @@
 ---
 name: weekly-plan
-description: Plan the week: goals, deliverables by day, review ladder, partner session, SteerCo prep.
+description: "Plan the week: goals, deliverables by day, review ladder, partner session, SteerCo prep."
 disable-model-invocation: false
 user-invocable: true
 ---

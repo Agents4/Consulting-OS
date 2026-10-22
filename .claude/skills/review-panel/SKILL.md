@@ -1,6 +1,6 @@
 ---
 name: review-panel
-description: Run a multi-persona review of any output with the sub-agent reviewers: partner, EM, skeptic, client sponsor, CFO, and QC.
+description: "Run a multi-persona review of any output with the sub-agent reviewers: partner, EM, skeptic, client sponsor, CFO, and QC."
 disable-model-invocation: false
 user-invocable: true
 ---

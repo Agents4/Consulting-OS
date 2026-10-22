@@ -1,6 +1,6 @@
 ---
 name: storyline
-description: Build the storyline: governing thought, key lines, dot-dash page logic, using Pyramid Principle and SCQA.
+description: "Build the storyline: governing thought, key lines, dot-dash page logic, using Pyramid Principle and SCQA."
 disable-model-invocation: false
 user-invocable: true
 ---

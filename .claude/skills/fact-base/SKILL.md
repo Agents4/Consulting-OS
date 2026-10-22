@@ -1,6 +1,6 @@
 ---
 name: fact-base
-description: Assemble the baseline fact base: current performance, definitions, and the one set of numbers the team uses.
+description: "Assemble the baseline fact base: current performance, definitions, and the one set of numbers the team uses."
 disable-model-invocation: false
 user-invocable: true
 ---

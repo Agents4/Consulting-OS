@@ -1,6 +1,6 @@
 ---
 name: data-request
-description: Create and track data requests to the client: what, why, format, owner, due date, with confidentiality basis.
+description: "Create and track data requests to the client: what, why, format, owner, due date, with confidentiality basis."
 disable-model-invocation: false
 user-invocable: true
 ---

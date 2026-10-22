@@ -1,6 +1,6 @@
 ---
 name: client-update-email
-description: Draft a client email: status, request, escalation, or thank-you, in the right tone and length.
+description: "Draft a client email: status, request, escalation, or thank-you, in the right tone and length."
 disable-model-invocation: false
 user-invocable: true
 ---
