@@ -1,6 +1,6 @@
 ---
 name: retrospective
-description: Run an engagement retrospective: outcomes, estimates vs actuals, handoff quality, tooling, learnings.
+description: "Run an engagement retrospective: outcomes, estimates vs actuals, handoff quality, tooling, learnings."
 disable-model-invocation: false
 user-invocable: true
 ---

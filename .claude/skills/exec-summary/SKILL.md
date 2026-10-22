@@ -1,6 +1,6 @@
 ---
 name: exec-summary
-description: Write the executive summary page: answer, prize, three reasons, risks, ask. Must stand alone.
+description: "Write the executive summary page: answer, prize, three reasons, risks, ask. Must stand alone."
 disable-model-invocation: false
 user-invocable: true
 ---

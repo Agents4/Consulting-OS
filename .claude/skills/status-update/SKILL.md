@@ -1,6 +1,6 @@
 ---
 name: status-update
-description: Write the weekly status for the sponsor: progress, findings, risks, decisions needed, next steps.
+description: "Write the weekly status for the sponsor: progress, findings, risks, decisions needed, next steps."
 disable-model-invocation: false
 user-invocable: true
 ---

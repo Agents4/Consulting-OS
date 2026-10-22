@@ -8,7 +8,7 @@ Re-run after you change a skill or CLAUDE.md, then bump "version" in gemini-exte
 """
 import glob, json, os, re, shutil
 
-ROOT = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", ".."))
+ROOT = os.environ.get("OS_ROOT") or os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", ".."))
 NAME = "consulting-os"
 VERSION = "1.2.0"
 EXT = f"~/.gemini/extensions/{NAME}"
@@ -34,6 +34,8 @@ def convert_skill(src):
     fm = m.group(1); body = s[m.end():]
     name = re.search(r"^name:\s*(.+)$", fm, re.M).group(1).strip()
     desc = re.search(r"^description:\s*(.+)$", fm, re.M).group(1).strip()
+    if desc.startswith('"'):
+        desc = json.loads(desc)   # quoted YAML scalar (JSON-compatible)
     # drop Output Format Options (Google connector routes) and Claude-only bits
     parts = re.split(r"(?m)^(?=## )", body)
     parts = [p for p in parts if not p.startswith("## Output Format Options")]

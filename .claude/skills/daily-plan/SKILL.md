@@ -1,6 +1,6 @@
 ---
 name: daily-plan
-description: Plan the day: check-in priorities, review slots, handoffs, and check-out; keep the team's rhythm.
+description: "Plan the day: check-in priorities, review slots, handoffs, and check-out; keep the team's rhythm."
 disable-model-invocation: false
 user-invocable: true
 ---

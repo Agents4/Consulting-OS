@@ -1,6 +1,6 @@
 ---
 name: knowledge-capture
-description: Capture reusable assets after an engagement: frameworks, model modules, benchmarks, case study draft, expert contacts.
+description: "Capture reusable assets after an engagement: frameworks, model modules, benchmarks, case study draft, expert contacts."
 disable-model-invocation: false
 user-invocable: true
 ---

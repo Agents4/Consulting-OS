@@ -1,6 +1,6 @@
 ---
 name: decision-doc
-description: Log a decision: context, options, choice, owner, date, and what would reverse it.
+description: "Log a decision: context, options, choice, owner, date, and what would reverse it."
 disable-model-invocation: false
 user-invocable: true
 ---

@@ -1,6 +1,6 @@
 ---
 name: workplan-build
-description: Build a hypothesis-driven workplan: modules, tasks, owners, dates, dependencies, gates.
+description: "Build a hypothesis-driven workplan: modules, tasks, owners, dates, dependencies, gates."
 disable-model-invocation: false
 user-invocable: true
 ---

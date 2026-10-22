@@ -1,6 +1,6 @@
 ---
 name: recommendation
-description: Synthesize the final recommendation: what, why, financial case, conditions, risks, and the ask.
+description: "Synthesize the final recommendation: what, why, financial case, conditions, risks, and the ask."
 disable-model-invocation: false
 user-invocable: true
 ---
