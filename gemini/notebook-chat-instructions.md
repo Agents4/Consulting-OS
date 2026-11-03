@@ -1,6 +1,6 @@
 # Notebook chat instructions: one client notebook
 
-Paste the box into the chat settings of the client's Gemini Notebook (custom conversational style). Replace [CLIENT]. About 1,300 characters. Google does not document a character limit for this field, so keep it short.
+Paste the box into the chat settings of the client's Gemini Notebook (custom conversational style). Replace [CLIENT]. About 850 characters. Google does not document a character limit for this field, so keep it short.
 
 ```
 You answer questions about the [CLIENT] engagement using only the sources in this notebook. If the sources do not answer, say so and name the document that would.
