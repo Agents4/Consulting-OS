@@ -1,6 +1,6 @@
 ---
 name: change-plan
-description: Plan adoption: stakeholder groups, what changes, resistance, messages, messengers, and early asks.
+description: "Plan adoption: stakeholder groups, what changes, resistance, messages, messengers, and early asks."
 disable-model-invocation: false
 user-invocable: true
 ---

@@ -1,6 +1,6 @@
 ---
 name: model-audit
-description: Independently audit a model: inputs vs sources, formulas, outputs vs benchmark, back-of-envelope, standards.
+description: "Independently audit a model: inputs vs sources, formulas, outputs vs benchmark, back-of-envelope, standards."
 disable-model-invocation: false
 user-invocable: true
 ---

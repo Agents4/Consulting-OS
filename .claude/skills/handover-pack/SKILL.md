@@ -1,6 +1,6 @@
 ---
 name: handover-pack
-description: Assemble the handover: model guide, data, deck masters, roadmap, owners, and a handover session plan.
+description: "Assemble the handover: model guide, data, deck masters, roadmap, owners, and a handover session plan."
 disable-model-invocation: false
 user-invocable: true
 ---

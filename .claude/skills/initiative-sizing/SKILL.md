@@ -1,6 +1,6 @@
 ---
 name: initiative-sizing
-description: Size the value of each initiative: baseline, uplift, flow-through, ramp-up, one-time cost, with ranges and a haircut.
+description: "Size the value of each initiative: baseline, uplift, flow-through, ramp-up, one-time cost, with ranges and a haircut."
 disable-model-invocation: false
 user-invocable: true
 ---

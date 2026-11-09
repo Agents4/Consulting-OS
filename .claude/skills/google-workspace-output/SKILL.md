@@ -1,6 +1,6 @@
 ---
 name: google-workspace-output
-description: Deliver a model, tracker, or deck as Google Sheets or Google Slides: check connectors, pick the route, build in place, verify, share safely.
+description: "Deliver a model, tracker, or deck as Google Sheets or Google Slides: check connectors, pick the route, build in place, verify, share safely."
 disable-model-invocation: false
 user-invocable: true
 ---

@@ -1,6 +1,6 @@
 ---
 name: partner-session-prep
-description: Prepare the problem-solving session with the partner: the question, options, evidence, and decision asked.
+description: "Prepare the problem-solving session with the partner: the question, options, evidence, and decision asked."
 disable-model-invocation: false
 user-invocable: true
 ---

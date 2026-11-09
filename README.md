@@ -112,6 +112,18 @@ Consulting-OS/
 3. Every number ties. Every model is independently reviewed.
 4. No em dashes. No delve, leverage, utilize, unlock, harness, streamline, robust, cutting-edge.
 
+## Changing the OS
+
+Skills live in `.claude/skills/<name>/SKILL.md`. Everything else for Gemini CLI, Gems, Copilot Notebooks and the Claude.ai upload bundle is generated from them. `os.manifest.json` lists the files that change with a skill.
+
+To add a skill:
+
+1. Write `.claude/skills/<name>/SKILL.md`. Quote the `description` in the frontmatter, because an unquoted `: ` breaks strict YAML parsers.
+2. List it in `CLAUDE.md` (its group and the count), in `README.md`, and in `gemini/tools/build_pack.py` (`order_a`, `order_b` or `order_c`). Update the counts in the setup guides.
+3. Add a case in `evals/cases/` if the skill changes decisions.
+4. Run `python3 gemini/tools/build_extension.py`, `python3 scripts/build_bundle.py`, and the two `build_pack.py` commands.
+5. Run `python3 scripts/check_os.py`. It fails on a missing registry, a wrong count, a banned word, an em dash, an unquoted description, or a stale generated file.
+
 ## About the Research
 
 The model is built from public sources: firm career and insight pages, consulting-prep material, practitioner writing, and published modeling standards. Public information on how firms work is partial and often anecdotal. `context-library/engagement-model/sources.md` rates each source and lists known gaps. Treat it as a strong default, then adjust to your firm's practice. Nothing here is proprietary to McKinsey, BCG, or Bain.

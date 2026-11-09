@@ -1,6 +1,6 @@
 ---
 name: research-plan
-description: Plan and run research from the issue tree: locked definitions, MECE ranked questions, source and method plan, compliance check, midpoint check-in, triangulated and graded sources, and a synthesis that updates the hypotheses.
+description: "Plan and run research from the issue tree: locked definitions, MECE ranked questions, source and method plan, compliance check, midpoint check-in, triangulated and graded sources, and a synthesis that updates the hypotheses."
 disable-model-invocation: false
 user-invocable: true
 ---

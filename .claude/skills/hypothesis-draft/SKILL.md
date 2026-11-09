@@ -1,6 +1,6 @@
 ---
 name: hypothesis-draft
-description: Write and maintain a hypothesis log: statement, evidence for/against, test, confidence, status.
+description: "Write and maintain a hypothesis log: statement, evidence for/against, test, confidence, status."
 disable-model-invocation: false
 user-invocable: true
 ---

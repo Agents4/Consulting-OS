@@ -1,6 +1,6 @@
 ---
 name: ingest-materials
-description: Ingest new client materials and data: digest each file, find conflicts, and propose approved updates to the fact base, hypotheses, stakeholders, decisions, and risks.
+description: "Ingest new client materials and data: digest each file, find conflicts, and propose approved updates to the fact base, hypotheses, stakeholders, decisions, and risks."
 disable-model-invocation: false
 user-invocable: true
 ---

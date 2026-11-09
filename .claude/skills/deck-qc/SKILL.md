@@ -1,6 +1,6 @@
 ---
 name: deck-qc
-description: Production QC: consistency, formatting, titles, sources, spelling, the horizontal flow test, and file hygiene.
+description: "Production QC: consistency, formatting, titles, sources, spelling, the horizontal flow test, and file hygiene."
 disable-model-invocation: false
 user-invocable: true
 ---

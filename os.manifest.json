@@ -1,0 +1,49 @@
+{
+  "manifest_version": 1,
+  "name": "Consulting-OS",
+  "slug": "consulting-os",
+  "version": {"file": "gemini/tools/build_extension.py", "pattern": "VERSION = \"([^\"]+)\""},
+  "rules_file": "CLAUDE.md",
+  "skills": {
+    "source": ".claude/skills",
+    "local": null,
+    "authoring_guide": "context-library/engagement-model/",
+    "template": null,
+    "naming": "lowercase letters, digits, single hyphens; folder name equals name. Quote the description in the frontmatter"
+  },
+  "commands": {
+    "validate": "python3 scripts/check_os.py",
+    "build": "python3 gemini/tools/build_extension.py && python3 scripts/build_bundle.py && python3 gemini/tools/build_pack.py gemini && python3 gemini/tools/build_pack.py copilot",
+    "evals": "evals/README.md"
+  },
+  "registries": [
+    {"file": "CLAUDE.md", "check": "lists_skills", "update": "Add the skill to its group in the Skills section and update the skill count"},
+    {"file": "README.md", "check": "lists_skills", "update": "Update the skill list and counts"},
+    {"file": "gemini/tools/build_pack.py", "check": "lists_skills", "except": ["connect-mcps"], "update": "Add the skill to the right order_a, order_b or order_c list"}
+  ],
+  "counts": [
+    {"file": "CLAUDE.md", "pattern": "(\\d+) skills in `\\.claude", "expect": "n"},
+    {"file": "README.md", "pattern": "(\\d+) slash commands cover", "expect": "n"},
+    {"file": "README.md", "pattern": "\\*\\*(\\d+) skills\\*\\*", "expect": "n"},
+    {"file": "README.md", "pattern": "# (\\d+) slash-command skills", "expect": "n"},
+    {"file": "README.md", "pattern": "installs (\\d+) skills", "expect": "n-2"},
+    {"file": "README.md", "pattern": ", (\\d+) slash commands and the rules", "expect": "n-1"},
+    {"file": "GEMINI.md", "pattern": "(\\d+) skills ship with this extension", "expect": "n-2"},
+    {"file": "setup/gemini-cli-extension.md", "pattern": "You get (\\d+) skills", "expect": "n-2"},
+    {"file": "setup/gemini-cli-extension.md", "pattern": "You get \\d+ skills, (\\d+) slash commands", "expect": "n-1"},
+    {"file": "setup/gemini-cli-extension.md", "pattern": "shows (\\d+) skills", "expect": "n-2"},
+    {"file": "setup/gemini-cli-extension.md", "pattern": "\\| (\\d+) skills \\|", "expect": "n-2"},
+    {"file": "setup/gemini-cli-extension.md", "pattern": "\\| (\\d+) slash commands \\|", "expect": "n-1"},
+    {"file": "setup/gemini-setup-guide.md", "pattern": "(\\d+) of the \\d+ skills", "expect": "n-1"},
+    {"file": "setup/gemini-setup-guide.md", "pattern": "of the (\\d+) skills", "expect": "n"},
+    {"file": "setup/gemini-setup-guide.md", "pattern": "one install command, (\\d+) skills", "expect": "n-2"},
+    {"file": "setup/gemini-setup-guide.md", "pattern": "skills, (\\d+) slash commands\\)", "expect": "n-1"}
+  ],
+  "generated": [
+    "GEMINI.md", "gemini-extension.json", "skills", "commands",
+    "gemini/knowledge-pack", "copilot/knowledge-pack", "advanced/skills-bundle.zip"
+  ],
+  "protect": ["context-library/engagements/", "context-library/stakeholders/", "context-library/data/", "context-library/client-materials/", "outputs/"],
+  "evals": "evals/",
+  "platforms": ["claude-code", "gemini-cli", "gemini-gem", "copilot-notebook"]
+}

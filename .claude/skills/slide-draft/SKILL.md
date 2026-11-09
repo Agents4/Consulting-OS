@@ -1,6 +1,6 @@
 ---
 name: slide-draft
-description: Draft a single slide: action title, chart choice, layout, callouts, source line, and speaker notes.
+description: "Draft a single slide: action title, chart choice, layout, callouts, source line, and speaker notes."
 disable-model-invocation: false
 user-invocable: true
 ---

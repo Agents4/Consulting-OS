@@ -1,6 +1,6 @@
 ---
 name: proposal-draft
-description: Draft an engagement proposal: situation, objectives, approach, team, timeline, fees, and why us. Pursuit phase.
+description: "Draft an engagement proposal: situation, objectives, approach, team, timeline, fees, and why us. Pursuit phase."
 disable-model-invocation: false
 user-invocable: true
 ---

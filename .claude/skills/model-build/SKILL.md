@@ -1,6 +1,6 @@
 ---
 name: model-build
-description: Build the Excel model from the spec: separate inputs, calculations, outputs; formulas only; checks that pass.
+description: "Build the Excel model from the spec: separate inputs, calculations, outputs; formulas only; checks that pass."
 disable-model-invocation: false
 user-invocable: true
 ---

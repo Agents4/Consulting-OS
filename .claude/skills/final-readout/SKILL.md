@@ -1,6 +1,6 @@
 ---
 name: final-readout
-description: Prepare the final SteerCo readout: outline, pages, Q&A rehearsal, pre-readout checklist, decisions.
+description: "Prepare the final SteerCo readout: outline, pages, Q&A rehearsal, pre-readout checklist, decisions."
 disable-model-invocation: false
 user-invocable: true
 ---

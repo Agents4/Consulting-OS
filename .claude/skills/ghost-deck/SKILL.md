@@ -1,6 +1,6 @@
 ---
 name: ghost-deck
-description: Create a ghost deck: empty slides with action titles, chart sketches, and data needs, before analysis finishes.
+description: "Create a ghost deck: empty slides with action titles, chart sketches, and data needs, before analysis finishes."
 disable-model-invocation: false
 user-invocable: true
 ---

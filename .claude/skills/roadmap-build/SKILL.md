@@ -1,6 +1,6 @@
 ---
 name: roadmap-build
-description: Build the implementation roadmap: initiatives, sequencing, owners, milestones, KPIs, quick wins, governance.
+description: "Build the implementation roadmap: initiatives, sequencing, owners, milestones, KPIs, quick wins, governance."
 disable-model-invocation: false
 user-invocable: true
 ---

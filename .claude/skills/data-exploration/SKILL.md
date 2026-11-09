@@ -1,6 +1,6 @@
 ---
 name: data-exploration
-description: Profile and clean client data: completeness, outliers, definitions, reconciliations to reported figures.
+description: "Profile and clean client data: completeness, outliers, definitions, reconciliations to reported figures."
 disable-model-invocation: false
 user-invocable: true
 ---

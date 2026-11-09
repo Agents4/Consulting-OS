@@ -1,6 +1,6 @@
 ---
 name: handoff-brief
-description: Write a handoff: Brief, Backup, So-what, Ask. For assignments and review submissions.
+description: "Write a handoff: Brief, Backup, So-what, Ask. For assignments and review submissions."
 disable-model-invocation: false
 user-invocable: true
 ---

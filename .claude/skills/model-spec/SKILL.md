@@ -1,6 +1,6 @@
 ---
 name: model-spec
-description: Write the model specification before building: questions, structure, inputs, calculations, outputs, checks, owner.
+description: "Write the model specification before building: questions, structure, inputs, calculations, outputs, checks, owner."
 disable-model-invocation: false
 user-invocable: true
 ---

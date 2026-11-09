@@ -1,6 +1,6 @@
 ---
 name: engagement-health-check
-description: Check engagement health: scope, question, hypotheses, team load, client relationship, financials, quality, risks.
+description: "Check engagement health: scope, question, hypotheses, team load, client relationship, financials, quality, risks."
 disable-model-invocation: false
 user-invocable: true
 ---
