@@ -55,7 +55,9 @@ Working loop:
 4. Weekly, 15 minutes: refresh changed cards and the register, then run `/program-rollup`.
 5. Monthly: move closed projects' cards out of the Notebook into an archive folder. Keep their register rows.
 
-Limits to plan for: Notebook sources per notebook are 50, 100 or 300 by tier. At one card plus one to three evidence docs per project, 20 projects is roughly 40 to 80 sources. Confirm your tier with IT. Everyone with access to a Notebook reads every source, so add only projects the whole team may see.
+Limits to plan for: Notebook sources per notebook are 50, 100, 300, 400 or 600 by tier (Standard, More, Higher, Expanded, Highest). At one card plus one to three evidence docs per project, 20 projects is roughly 40 to 80 sources. Confirm your tier with IT. Everyone with access to a Notebook reads every source, so add only projects the whole team may see.
+
+Gems are being replaced by skills. Status on 16 November 2026: skills began rolling out in the Gemini app to Workspace editions on 13 October, and Gems stay until 1 March 2027 at the earliest. When your admin turns skills on, you can convert the program Gem to a skill (it arrives as an inactive draft you activate) and attach the Notebook to the skill, which a Gem could not take. Test sharing with a second user first. Details: `setup/gemini-setup-guide.md`.
 
 Get written approval that your Workspace is an approved place for the data before you load anything. See `setup/gemini-setup-guide.md`, Step 0.
 
