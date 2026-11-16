@@ -1,0 +1,73 @@
+name: checks
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Validate skills and registries
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python3 scripts/check_os.py
+
+  generated-files:
+    name: Generated files are current
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install pandoc
+        run: sudo apt-get update && sudo apt-get install -y pandoc
+      - name: Rebuild
+        run: |
+          python3 gemini/tools/build_extension.py
+          python3 scripts/build_bundle.py
+          python3 gemini/tools/build_pack.py gemini
+          python3 gemini/tools/build_pack.py copilot
+      # .docx files embed build metadata, so compare everything else.
+      - name: Fail if a generated file changed
+        run: |
+          git checkout -- '*.docx'
+          git status --short
+          git diff --exit-code
+
+  voice:
+    name: House voice and client data
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: No em dashes or banned words in added text
+        run: python3 scripts/check_voice.py "origin/${{ github.base_ref }}"
+      - name: No client data in the change
+        run: scripts/check_client_data.sh "origin/${{ github.base_ref }}"
+
+  extension:
+    name: Gemini CLI extension validates
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: npm install -g @google/gemini-cli
+      - run: gemini --version
+      - run: gemini extensions validate .
