@@ -3,9 +3,11 @@
 Run Consulting OS in Gemini, with one Gem and one Drive folder per client. Context and outputs live in Google Drive, so a client's whole engagement sits in one place you can share, audit and archive.
 
 **Time:** about 45 minutes once, then about 10 minutes per new client.
-**Last checked:** 3 November 2026. Gemini changes quickly. Check each limit against the sources at the end before you rely on it.
+**Last checked:** 16 November 2026. Gemini changes quickly. Check each limit against the sources at the end before you rely on it.
 
-> **Corporate Google Workspace account, no agent platform?** This guide fits. You need only the Gemini app (Gems) and Gemini Notebook (formerly NotebookLM). Google's transition page says skills are available to personal accounts only for now, with work accounts "soon", and that Gems stay on Workspace business, enterprise and nonprofit accounts until March 2027. Open the Skills page on your corporate account. If it is missing, use Gems as written below. If it is there, Consulting OS still stays on Gems for now, because its skills point at extension file paths that do not exist inside the Gemini app. Plan to re-check in Q1 2027.
+> **Corporate Google Workspace account, no agent platform?** This guide fits. You need only the Gemini app (Gems) and Gemini Notebook (formerly NotebookLM). Status on 16 November 2026, from Google's transition page (updated 9 November): skills began rolling out in the Gemini app to all Workspace editions on 13 October. Your admin must turn them on, so the Skills page may not show yet. Gems move into Settings on 17 November and stay until 1 March 2027 at the earliest for Business and Enterprise editions (1 June 2027 for Education). Google converts a Gem to a skill only in the Gemini app, as an inactive draft you activate. Skills built in the Gemini app do not appear in Workspace apps or Gemini Enterprise.
+>
+> **What to do:** keep this guide's Gem route for the pilot. It works today and needs no admin change beyond Gem sharing. If your Skills page is on, you can convert the Gem later and attach the context Docs or the client Notebook to the skill. Two things to test with a second user before you plan a team rollout: whether skill sharing works (Google's help page documents it, the admin page lists it as coming soon), and whether your admin has capped active skills. Re-check in Q1 2027, before the March date.
 
 ## Pick your path
 
@@ -28,7 +30,7 @@ Consulting OS rule 7: client data stays on approved platforms. Before you put a 
 1. **Confirm Google Workspace is an approved platform** for this client. Record where the approval lives in doc 01, "Approved platforms for client data". Without written approval, stop and use a client-approved tool.
 2. **Use the approved work account, not a personal Gmail.** Sign out of other Google accounts in that browser. Being signed into a personal and a work account at once can cause Gem save failures.
 3. **Know which data terms apply.** Google's help page says that on consumer accounts, with Keep Activity on, chats can be used to improve Google services including training, and a subset is read by human reviewers. It says work and school accounts may be subject to different data handling terms and points to the Workspace privacy hub. Ask your IT or Workspace admin to confirm the terms for your account. If a personal account is ever involved, turn Keep Activity off, and still do not put client data in it.
-4. **Check admin controls.** An admin can turn Gem sharing on or off per organizational unit or group (a group setting wins, and changes take up to 24 hours). Gems live in Drive, so Drive sharing rules apply too, including external sharing. If sharing a Gem fails, this is the usual cause. Ask IT for: the Gemini app and Gem sharing on for your pilot group, Gemini Notebook on and its tier (50, 100 or 300 sources per notebook), external sharing off for the shared drive, and a group-owned shared drive for `Consulting Engagements` so files do not belong to one person.
+4. **Check admin controls.** An admin can turn Gem sharing on or off per organizational unit or group (a group setting wins, and changes take up to 24 hours). Gems live in Drive, so Drive sharing rules apply too, including external sharing. If sharing a Gem fails, this is the usual cause. Ask IT for: the Gemini app and Gem sharing on for your pilot group, skills on in the Gemini app (Workspace Studio and Gemini in Workspace settings) so you can convert later, Gemini Notebook on and its tier (Standard 50, More 100, Higher 300, Expanded 400 or Highest 600 sources per notebook), external sharing off for the shared drive, and a group-owned shared drive for `Consulting Engagements` so files do not belong to one person.
 5. **Use codenames in prompts** if the client asked for it. Never paste another client's material.
 
 ## Step 1: Build the shared Core folder (once)
@@ -113,12 +115,12 @@ Open the Gem manager, choose share, and add teammates by email with viewer or ed
 A Gem runs playbooks and drafts. A Notebook answers only from your documents, with citations. Use both.
 
 1. Open Gemini Notebook with the work account and create a notebook named `[Client] | Engagement`.
-2. Add sources: the six context Docs from `00_Context`, plus the client materials cleared for this platform (SOW, annual report, board decks, data notes). Import them as Google Docs so Drive sync keeps them current. Keep the count under your tier: 50, 100 or 300 sources. Each source can be up to 500,000 words or 200 MB.
+2. Add sources: the six context Docs from `00_Context`, plus the client materials cleared for this platform (SOW, annual report, board decks, data notes). Import them as Google Docs so Drive sync keeps them current. Keep the count under your tier (50, 100, 300, 400 or 600 sources). Google's earlier help page gave 500,000 words or 200 MB per source; the current work-account page lists no size, so check one large file before you rely on it.
 3. Open the chat settings, choose a custom conversational style, and paste the box from `gemini/notebook-chat-instructions.md`.
 4. Share it with the engagement team only. Everyone with access reads every source.
 5. Use it for: what do we know about X, where do two sources disagree, which interview said this. Take the answer into the Gem to run the playbook.
 
-On enterprise-grade Workspace editions, Google states that Notebook files, chats and outputs are not reviewed by humans or used to improve models. Confirm your edition with IT. Adding a Notebook to a Gem as a knowledge source is reported to fail; export what you need to a Doc and attach that.
+Google states that on its core-service, enterprise-grade editions Notebook files, chats and outputs are not reviewed by humans or used to train models. For editions treated as an additional service, content is not used to train models unless you send feedback. Google's page leaves some higher-tier privacy cells blank, so confirm your edition with IT. Adding a Notebook to a Gem as a knowledge source is reported to fail (low confidence). A skill can take a Notebook as a source, so if you convert the Gem to a skill, attach the Notebook there.
 
 ## Step 4: The daily working loop
 
@@ -183,6 +185,7 @@ Path B writes files, but the same human gates apply.
 | Long chats drift | Start a new chat per task. The context docs carry the state |
 | Gem not saving | Click Save before closing the preview. Use a single signed-in account |
 | Gem will not share | Your admin may restrict sharing. Also share the attached files |
+| Gems are being retired | Gems stay until 1 March 2027 at the earliest for Business and Enterprise. Converted Gems arrive as inactive drafts with names, instructions, knowledge files and Drive permissions kept. Activate and test each one |
 | Retrieval may miss a rule | If an answer ignores a standard, name the playbook or doc: "Use the numbers-tie rule in CORE-1" |
 | Gemini can be wrong | It can invent numbers or formulas. Tie out every number. Do not send unreviewed output |
 | Playbook files go stale | After you change a skill or framework, run `python3 gemini/tools/build_pack.py` (needs pandoc), then replace the 3 files in `00_Core` and re-attach them to each Gem |
@@ -196,7 +199,7 @@ Path B writes files, but the same human gates apply.
 
 ## Sources
 
-- [About the transition from Gems to skills (Gemini Apps Help)](https://support.google.com/gemini/answer/18560919)
+- [About the transition from Gems to skills (Gemini Apps Help), updated 9 November 2026](https://support.google.com/gemini/answer/18560919)
 - [Use Gemini Notebook with a work or school Google account (Google)](https://support.google.com/notebooklm/answer/16337734)
 - [Turn Gem sharing on or off (Workspace Admin Help)](https://knowledge.workspace.google.com/admin/generative-ai/gemini-app/turn-gem-sharing-on-or-off)
 - [Gemini Gems file limit (fast.io)](https://fast.io/resources/gemini-gems-file-limit/)
