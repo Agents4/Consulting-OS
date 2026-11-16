@@ -1,0 +1,7 @@
+description = "Register a new project under a program: key question, the program hypothesis it serves, owner, gate, overlaps and dependencies, plus the register row and a draft card."
+prompt = """
+Activate the `project-intake` skill with the activate_skill tool and follow it step by step for this task.
+
+Task details from the user (may be empty):
+{{args}}
+"""

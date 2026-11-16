@@ -1,0 +1,7 @@
+description = "Bring existing projects into a program from the documents they already have: charters, plans, status reports, decks, trackers and notes. Drafts a card and register row per project, with every field sourced and every gap marked."
+prompt = """
+Activate the `program-import` skill with the activate_skill tool and follow it step by step for this task.
+
+Task details from the user (may be empty):
+{{args}}
+"""

@@ -1,0 +1,7 @@
+description = "Roll up the project register and cards into one program view: status, dependencies, cross-project risks, conflicting numbers, hypothesis tally, stale cards, and what the SteerCo must decide."
+prompt = """
+Activate the `program-rollup` skill with the activate_skill tool and follow it step by step for this task.
+
+Task details from the user (may be empty):
+{{args}}
+"""

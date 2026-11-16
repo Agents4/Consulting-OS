@@ -8,6 +8,8 @@ Realistic cases to test skills after a change. Each case has `input.md` (what th
 | 02 | `research-plan` | An issue tree branch becomes locked definitions, ranked questions, a source plan and a compliance check before any search |
 | 03 | `number-tie-out` | A slide says 14 percent and the model says 12.4 percent: the skill must flag it and block the send |
 | 04 | `day-one-answer` | A thin brief: the answer comes first, assumptions are marked, nothing is invented |
+| 05 | `program-rollup` | Three project cards disagree on a baseline, one is stale, one has no card: the view must show both numbers, not pick one, and lead with the answer |
+| 06 | `program-import` | Five loose files become projects: names are matched and flagged, nothing is invented, status is copied not assigned, a thin idea is not registered as active |
 
 ## How to run
 

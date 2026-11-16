@@ -1,6 +1,6 @@
 # Consulting OS as a Gemini CLI Extension
 
-Install the whole OS into Gemini CLI with one command. You get 55 skills, 56 slash commands, the engagement rules, review personas, frameworks, and model and deck templates. Your engagement files stay in your own folder, one folder per client.
+Install the whole OS into Gemini CLI with one command. You get 59 skills, 60 slash commands, the engagement rules, review personas, frameworks, and model and deck templates. Your engagement files stay in your own folder, one folder per client.
 
 **Tested:** the extension passes `gemini extensions validate` and installs from a local copy on Gemini CLI 0.65.0, and the CLI lists all 53 skills (the first build, before `/ingest-materials`) and the context file. I did not run a live model session (it needs your sign-in), and I did not test the install from GitHub. I re-checked Google's CLI and Antigravity announcements on 16 November 2026 and found no change. On the same day `gemini extensions validate` passed on Gemini CLI 0.68.0, and CI repeats that check on every pull request. Try one skill after you install and tell me what breaks.
 
@@ -17,7 +17,7 @@ gemini extensions install https://github.com/Agents4/Consulting-OS
 
 The manifest is on `main`, so no `--ref` is needed. The repo has no release tags yet. After you tag one, pin it with `--ref=<tag>`, for example `--ref=v1.2.0`.
 
-Check it: `gemini extensions list` shows `consulting-os`. Inside `gemini`, `/skills list` shows 55 skills and `/memory show` shows the context file.
+Check it: `gemini extensions list` shows `consulting-os`. Inside `gemini`, `/skills list` shows 59 skills and `/memory show` shows the context file.
 
 Update with `gemini extensions update consulting-os`.
 
@@ -36,8 +36,8 @@ Everything the OS writes goes to `outputs/` in that folder. Close the session, o
 | Piece | Where it lives |
 |---|---|
 | Rules, voice, skill list, path map | `GEMINI.md` in the extension. Loaded every session |
-| 55 skills | `skills/<name>/SKILL.md`. Gemini activates one when a task matches |
-| 56 slash commands | `commands/<name>.toml`. `/issue-tree` activates the issue-tree skill. `/engagement-init` runs the setup script |
+| 59 skills | `skills/<name>/SKILL.md`. Gemini activates one when a task matches |
+| 60 slash commands | `commands/<name>.toml`. `/issue-tree` activates the issue-tree skill. `/engagement-init` runs the setup script |
 | Frameworks, engagement model, templates, review personas | The extension folder, `~/.gemini/extensions/consulting-os/`. Read-only |
 | Client context and outputs | Your client folder: `context-library/` and `outputs/` |
 
