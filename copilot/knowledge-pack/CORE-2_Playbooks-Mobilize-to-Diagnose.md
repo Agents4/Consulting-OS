@@ -775,6 +775,131 @@ Before delivering, verify:
 
 
 
+## Playbook: Project Intake (name: project-intake)
+
+### Quick Start
+
+Say: **Run the project-intake playbook**
+Then provide:
+1. **The project** in a sentence, and who owns it
+2. **Why now**: the decision it supports and when
+3. **What exists**: any notes, data or earlier work
+
+I will turn it into a register row and a draft project card, check it against the projects already in the register, and name what the SteerCo needs to know.
+
+**Output:** Delivered in chat. Copy into Word or Excel and file in the client Outputs folder.
+**Time:** ~15 min
+
+**When to use:** Each time a new project joins a program, before any analysis starts
+
+**Phase:** Mobilize (per project)
+
+### Step 1: Diagnostic Questions
+
+Ask only what the files cannot answer:
+
+#### Question 1: The Hypothesis
+**"Which program hypothesis does this project test, or what would it change in the program answer?"**
+
+If there is no answer, say so and ask why the project exists. Work that traces to no hypothesis does not enter the register.
+
+#### Question 2: The Decision
+**"What decision will the SteerCo make with this, and by when?"**
+
+---
+
+### The Process
+
+#### Step 1: Write the key question
+One sentence with a decision and a date. Test: could a colleague say on that date whether it was answered?
+
+#### Step 2: Link it to the program
+Name the program hypothesis (PH ID) it serves. If it serves none, propose a new program hypothesis or stop.
+
+#### Step 3: Check overlaps and dependencies
+Compare against every register row. Flag same owner, same question, shared data, or one project feeding another. Name the other project by ID. Do not merge or drop projects. Raise it.
+
+#### Step 4: Set phase, gate and owner
+One gate with a date. Flag an owner who already holds several open projects.
+
+#### Step 5: Draft the first hypothesis and its test
+One hypothesis with a test and a date.
+
+#### Step 6: Draft the register row and the card
+Use `templates/project-register-template.md` and `templates/project-card-template.md`. Mark every assumption.
+
+#### Step 7: Say who should hear first
+Name stakeholders to pre-wire and whether the SteerCo needs a decision on scope.
+
+---
+
+### Structured Output Template
+
+```markdown
+# Project Intake: [ID] [Name]
+
+**Answer first:** [Add, merge with P#, or hold. One sentence why.]
+
+## Register row
+| ID | Project | Owner | Phase | Project key question | Serves program hypothesis | Status | Why | Next gate and date | Depends on | Card | Updated |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+
+## Overlaps and dependencies
+| With | Type | What to do |
+|---|---|---|
+
+## Draft card
+[Filled from templates/project-card-template.md]
+
+## Open questions
+[Question, who can answer, by when]
+
+## Who should hear first
+[Names]
+```
+
+---
+
+### Output Integration
+
+#### Cross-Skill Integration
+
+**Feeds into:**
+- the project-card playbook - Keeps the card current
+- the program-rollup playbook - The new row appears in the program view
+- the hypothesis-draft playbook - First hypothesis
+
+**Pulls from:**
+- the problem-statement playbook - Key question wording
+- the stakeholder-map playbook - Who to pre-wire
+
+When this output goes to a teammate or reviewer, attach a handoff cover note: Brief, Backup, So-what, Ask. Never send a page without all four.
+
+---
+
+### Output Quality Self-Check
+
+Before delivering, verify:
+
+- [ ] **Hypothesis link** named, or the gap raised
+- [ ] **Overlaps** checked against every register row
+- [ ] **Owner and gate** have names and dates
+- [ ] **Assumptions** marked with IDs
+- [ ] **Answer first**: the so-what leads, the detail follows
+- [ ] **Sourced**: every number and claim has a source or is marked as an assumption
+- [ ] **Voice**: no em dashes; none of delve, leverage, utilize, unlock, harness, streamline, robust, cutting-edge
+
+---
+
+### Related Skills
+
+- `project-card` - Keep the card current
+- `program-rollup` - See all projects together
+- `problem-statement` - Sharpen the key question
+- `hypothesis-draft` - Build the hypothesis log
+
+
+
 ## Playbook: Ingest Materials (name: ingest-materials)
 
 ### Quick Start

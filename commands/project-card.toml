@@ -1,0 +1,7 @@
+description = "Create or refresh a one-page project card: key question, answer so far, hypotheses with confidence, numbers, decisions, risks, next gate, and the register row update."
+prompt = """
+Activate the `project-card` skill with the activate_skill tool and follow it step by step for this task.
+
+Task details from the user (may be empty):
+{{args}}
+"""

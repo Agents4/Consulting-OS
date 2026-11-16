@@ -10,7 +10,7 @@ import glob, json, os, re, shutil
 
 ROOT = os.environ.get("OS_ROOT") or os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", ".."))
 NAME = "consulting-os"
-VERSION = "1.2.0"
+VERSION = "1.3.0"
 EXT = f"~/.gemini/extensions/{NAME}"
 EXCLUDE = {"connect-mcps", "google-workspace-output"}   # Claude connector specific
 

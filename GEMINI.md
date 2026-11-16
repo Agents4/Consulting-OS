@@ -53,9 +53,9 @@ Ask specific clarifying questions before assuming. Challenge assumptions ("What 
 
 ## Skills
 
-55 skills ship with this extension. Gemini activates a skill when a task matches it, and every skill is also a slash command (for example `/issue-tree`). Skills check workspace context and connected tools automatically. `/engagement-init` scaffolds a new engagement folder.
+58 skills ship with this extension. Gemini activates a skill when a task matches it, and every skill is also a slash command (for example `/issue-tree`). Skills check workspace context and connected tools automatically. `/engagement-init` scaffolds a new engagement folder.
 
-**Mobilize:** `/proposal-draft` `/problem-statement` `/kickoff-plan` `/stakeholder-map` `/workplan-build` `/data-request`
+**Mobilize:** `/proposal-draft` `/problem-statement` `/kickoff-plan` `/stakeholder-map` `/workplan-build` `/data-request` `/project-intake`
 
 **Structure the problem:** `/day-one-answer` `/issue-tree` `/hypothesis-draft` `/prioritize-analyses`
 
@@ -67,7 +67,7 @@ Ask specific clarifying questions before assuming. Challenge assumptions ("What 
 
 **Storyline and deck:** `/storyline` `/ghost-deck` `/slide-draft` `/exec-summary` `/deck-qc` `/final-readout`
 
-**Rhythm and governance:** `/daily-plan` `/weekly-plan` `/weekly-review` `/status-update` `/steerco-prep` `/partner-session-prep` `/handoff-brief` `/meeting-agenda` `/meeting-notes` `/decision-doc` `/risk-register` `/client-update-email` `/engagement-health-check` `/review-panel`
+**Rhythm and governance:** `/daily-plan` `/weekly-plan` `/weekly-review` `/status-update` `/steerco-prep` `/partner-session-prep` `/handoff-brief` `/meeting-agenda` `/meeting-notes` `/decision-doc` `/risk-register` `/client-update-email` `/engagement-health-check` `/review-panel` `/project-card` `/program-rollup`
 
 **Close:** `/handover-pack` `/retrospective` `/knowledge-capture`
 
@@ -84,7 +84,7 @@ All skills work without connected tools. To add live access, install an extensio
 
 **CRITICAL: Write ALL new files to `outputs/` in the user's current workspace folder. Never write to `context-library/` directly, and never write inside the extension folder. The user moves finalized work into `context-library/` manually.** Exceptions, each only with the user's explicit approval: the learning log, and `/ingest-materials` updates to named workspace `context-library/` files (approved one file at a time, with a backup of the original saved in `outputs/` first).
 
-`outputs/` subfolders: `proposals/` · `problem-statements/` · `kickoff/` · `stakeholder-maps/` · `workplans/` · `data-requests/` · `issue-trees/` · `hypotheses/` · `interviews/` · `research-synthesis/` · `analyses/` · `models/` · `storylines/` · `ghost-decks/` · `decks/` · `reviews/` · `steerco/` · `status-updates/` · `meeting-notes/` · `decisions/` · `recommendations/` · `roadmaps/` · `transition/` · `retros/` · `daily-plans/` · `weekly-plans/` · `weekly-reviews/` · `team-messages/` · `workshops/` · `mcp-integration-logs/` · `skill-test-results/`
+`outputs/` subfolders: `proposals/` · `problem-statements/` · `kickoff/` · `stakeholder-maps/` · `workplans/` · `data-requests/` · `issue-trees/` · `hypotheses/` · `interviews/` · `research-synthesis/` · `analyses/` · `models/` · `storylines/` · `ghost-decks/` · `decks/` · `reviews/` · `steerco/` · `status-updates/` · `meeting-notes/` · `decisions/` · `recommendations/` · `roadmaps/` · `transition/` · `programs/` · `retros/` · `daily-plans/` · `weekly-plans/` · `weekly-reviews/` · `team-messages/` · `workshops/` · `mcp-integration-logs/` · `skill-test-results/`
 
 **Templates:** `~/.gemini/extensions/consulting-os/templates/` holds working templates including `model-starter-template.xlsx` and `ghost-deck-starter.pptx`. Copy them into `outputs/` and work on the copy.
 
@@ -121,6 +121,8 @@ Run "show me what you've learned" anytime. Learning stays in your workspace file
 **Model:** `/fact-base` → `/model-spec` → `/model-build` → `/model-audit` → `/scenario-sensitivity` → `/number-tie-out`
 
 **Deck:** `/storyline` → `/ghost-deck` → `/slide-draft` → `/number-tie-out` → `/deck-qc` → `/review-panel`
+
+**Program (one team, many projects):** `/project-intake` (each new project) → `/project-card` (after each change) → `/program-rollup` (weekly and before SteerCo) → `/steerco-prep`. Setup: `setup/running-a-program.md`
 
 **SteerCo:** `/stakeholder-map` → pre-wires → `/steerco-prep` → pre-read (2 to 3 days ahead) → meeting → `/decision-doc`
 
