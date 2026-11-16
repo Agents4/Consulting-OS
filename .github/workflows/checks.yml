@@ -37,10 +37,11 @@ jobs:
           python3 scripts/build_bundle.py
           python3 gemini/tools/build_pack.py gemini
           python3 gemini/tools/build_pack.py copilot
-      # .docx files embed build metadata, so compare everything else.
+      # .docx files embed build metadata and the zip's compressed bytes vary with
+      # the zlib build, so compare everything else. check_os.py compares the zip's contents.
       - name: Fail if a generated file changed
         run: |
-          git checkout -- '*.docx'
+          git checkout -- '*.docx' advanced/skills-bundle.zip
           git status --short
           git diff --exit-code
 

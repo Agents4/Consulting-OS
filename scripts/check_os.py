@@ -5,6 +5,14 @@ Run from anywhere: python3 scripts/check_os.py
 Exit code is 1 when there are errors. Standard library only.
 """
 import filecmp, glob, json, os, re, shutil, subprocess, sys, tempfile
+import zipfile
+
+
+def zip_contents(path):
+    """Names and uncompressed bytes. Raw zip bytes vary with the zlib build, so compare contents."""
+    with zipfile.ZipFile(path) as z:
+        return [(i.filename, z.read(i.filename)) for i in z.infolist()]
+
 
 ROOT = os.environ.get("OS_ROOT") or os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
 BANNED = ["delve", "leverage", "utilize", "unlock", "harness", "streamline", "robust", "cutting-edge"]
@@ -200,7 +208,7 @@ try:
     cur = os.path.join(ROOT, "advanced", "skills-bundle.zip")
     if r.returncode != 0:
         errors.append("build_bundle.py failed: " + (r.stderr.strip().splitlines() or ["unknown error"])[-1])
-    elif not os.path.isfile(cur) or open(cur, "rb").read() != open(bundle_tmp, "rb").read():
+    elif not os.path.isfile(cur) or zip_contents(cur) != zip_contents(bundle_tmp):
         errors.append("advanced/skills-bundle.zip is out of date (run python3 scripts/build_bundle.py)")
 finally:
     shutil.rmtree(tmp, ignore_errors=True)
