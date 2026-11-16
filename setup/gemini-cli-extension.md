@@ -2,7 +2,7 @@
 
 Install the whole OS into Gemini CLI with one command. You get 55 skills, 56 slash commands, the engagement rules, review personas, frameworks, and model and deck templates. Your engagement files stay in your own folder, one folder per client.
 
-**Tested:** the extension passes `gemini extensions validate` and installs from a local copy on Gemini CLI 0.65.0, and the CLI lists all 53 skills (the first build, before `/ingest-materials`) and the context file. I did not run a live model session (it needs your sign-in), and I did not test the install from GitHub. I re-checked Google's CLI and Antigravity announcements on 16 November 2026 and found no change, but I could not re-run the validator then because Gemini CLI is not installed where I work. Run `gemini extensions validate` after you install, try one skill, and tell me what breaks.
+**Tested:** the extension passes `gemini extensions validate` and installs from a local copy on Gemini CLI 0.65.0, and the CLI lists all 53 skills (the first build, before `/ingest-materials`) and the context file. I did not run a live model session (it needs your sign-in), and I did not test the install from GitHub. I re-checked Google's CLI and Antigravity announcements on 16 November 2026 and found no change. On the same day `gemini extensions validate` passed on Gemini CLI 0.68.0, and CI repeats that check on every pull request. Try one skill after you install and tell me what breaks.
 
 ## Check your access first
 
