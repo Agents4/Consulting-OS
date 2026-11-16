@@ -900,6 +900,166 @@ Before delivering, verify:
 
 
 
+## Playbook: Program Import (name: program-import)
+
+### Quick Start
+
+Say: **Run the program-import playbook**
+Then provide (all optional):
+1. **The program** and, if it exists, its key question and hypotheses
+2. **Where the project materials are**: a folder, a list of files, or pasted text. One project or many
+3. **Projects to include or skip**, and any owner names you already know
+
+I will inventory what exists, group it by project, draft a card and a register row for each project from the documents alone, and list what is unknown and who could answer it. Nothing is invented to fill a field.
+
+**Output:** Delivered in chat. Copy into Word or Excel and file in the client Outputs folder.
+**Time:** ~10 min per project, plus ~20 min for the cross-project pass
+
+**When to use:** When projects already exist and you want them in the program without retyping them. Use the project-intake playbook for a project that does not exist yet.
+
+**Phase:** Mobilize (program set-up)
+
+### Step 1: Diagnostic Questions
+
+Ask only what the files cannot answer:
+
+#### Question 1: The Scope
+**"Which projects count as part of this program, and which are adjacent?"**
+
+Do not guess the boundary. A project outside the program does not get a row.
+
+#### Question 2: The Source of Truth
+**"When two documents disagree, which one is the system of record for status, dates and owners?"**
+
+---
+
+### The Process
+
+#### Step 1: Inventory
+List every file with its type, date and the project it belongs to. Group files by project. Put anything that fits none in an "unassigned" list for the user. Confirm the project list with the user before drafting cards. For a large set, work in batches the user approves.
+
+#### Step 2: Resolve the project list
+Merge names that refer to one project, and say how you matched them. Flag any pair you are unsure about instead of merging it. Assign provisional IDs (P1, P2) unless the program already has a scheme.
+
+#### Step 3: Extract for each project
+For each project, fill the card from its documents only. Record the source file and location for every field.
+
+- **Key question:** use the document's own wording if it states one. If it does not, propose one from the project's goal and mark it Proposed.
+- **Owner, phase, gate and dates:** copy what the documents say, with the document date. If sources disagree, show both.
+- **Status:** copy the status and date the source states. Do not assign green, amber or red yourself. If none is stated, write Unknown.
+- **Hypotheses:** list those the documents state. If the project has none, you may list implied ones from its goals and mark each Implied, Low confidence, and ask the owner to confirm.
+- **Numbers:** table each figure with its source, date and whether it matches the program fact base.
+- **Decisions, risks and dependencies:** extract those the documents state, with owner and date where given.
+
+#### Step 4: Map to the program
+If the program has hypotheses, propose which one each project serves and say why. The user approves each link. If the program has no hypotheses, group the projects by the questions they ask and propose draft program hypotheses, marked Proposed. A project that fits none stays unmapped and goes to the owner with the question: why are we doing it?
+
+#### Step 5: Cross-project pass
+Across all imported projects, find:
+- Overlaps: same goal, owner, data or deliverable
+- Dependencies named in one document and missing from the other
+- The same metric with different values, shown with both sources and not resolved
+- Owners on many projects at once
+- Projects with no activity or update since a date the user sets, or the oldest source for each
+
+#### Step 6: Grade each project
+Give each project a completeness note: which fields are sourced, which are Unknown, and how old the newest source is. Rank the projects by how much work is needed before the card is usable. This is a reading of the documents, not a judgment on the project.
+
+#### Step 7: List open questions by owner
+Every Unknown becomes a question with a name, so the owner can answer it. Do not ask the user to guess.
+
+#### Step 8: Propose, do not promote
+Nothing goes into `context docs/` until the user approves it, one project at a time. The user moves agreed files there by hand.
+
+---
+
+### Structured Output Template
+
+```markdown
+# Program Import: [Program], [date]
+
+**Answer first:** [N projects found from M files. X have enough to be usable now, Y need owner input, Z files fit no project.]
+
+## Import plan
+| ID | Project (and other names) | Files used | Newest source | Completeness | Needs |
+|---|---|---|---|---|---|
+
+## Register draft
+[Rows from templates/project-register-template.md. Every unsourced cell reads Unknown.]
+
+## Program mapping
+| Project | Proposed program hypothesis | Why | Approve? |
+|---|---|---|---|
+
+## Cross-project findings
+| Type | Projects | Detail | Who decides |
+|---|---|---|---|
+
+## Open questions by owner
+| Owner | Project | Question | Needed for |
+|---|---|---|---|
+
+## Unassigned files
+[File, why it did not fit]
+
+## Source log
+| Project | Field | Value | Source file and location | Date |
+|---|---|---|---|---|
+
+## Assumptions
+[A# list]
+```
+
+Each project card draft is saved as its own file, using `templates/project-card-template.md`, with Proposed, Implied and Unknown marked in place.
+
+---
+
+### Output Integration
+
+#### Cross-Skill Integration
+
+**Feeds into:**
+- the project-card playbook - Keeps each imported card current
+- the program-rollup playbook - Reads the new register and cards
+- the hypothesis-draft playbook - Program hypotheses
+- the risk-register playbook - Cross-project risks
+
+**Pulls from:**
+- the ingest-materials playbook - Digests of the same files, if already run
+- the fact-base playbook - The agreed numbers
+- the stakeholder-map playbook - Owners and sponsors
+
+When this output goes to a teammate or reviewer, attach a handoff cover note: Brief, Backup, So-what, Ask. Never send a page without all four.
+
+---
+
+### Output Quality Self-Check
+
+Before delivering, verify:
+
+- [ ] **Every field** has a source file and location, or reads Unknown
+- [ ] **Nothing is invented**: key questions, hypotheses and statuses not in the documents are marked Proposed, Implied or Unknown
+- [ ] **Merged project names** show how they were matched; unsure pairs are flagged, not merged
+- [ ] **Status** is copied from a source, with its date, never assigned
+- [ ] **Conflicting numbers** are shown with both sources and not resolved
+- [ ] **Program links** are proposals the user approves
+- [ ] **Every Unknown** has a named owner and a question
+- [ ] **Answer first**: the so-what leads, the detail follows
+- [ ] **Sourced**: every number and claim has a source or is marked as an assumption
+- [ ] **Voice**: no em dashes; none of delve, leverage, utilize, unlock, harness, streamline, robust, cutting-edge
+
+---
+
+### Related Skills
+
+- `project-intake` - Register a project that is new
+- `project-card` - Keep each card current
+- `program-rollup` - See all projects together
+- `ingest-materials` - Digest files and reconcile the fact base
+- `hypothesis-draft` - Build the program hypotheses
+
+
+
 ## Playbook: Ingest Materials (name: ingest-materials)
 
 ### Quick Start

@@ -43,9 +43,9 @@ Ask specific clarifying questions before assuming. Challenge assumptions ("What 
 
 ## Skills
 
-60 skills in `.claude/skills/<name>/SKILL.md`. They load on demand and check workspace context and connected MCPs automatically.
+61 skills in `.claude/skills/<name>/SKILL.md`. They load on demand and check workspace context and connected MCPs automatically.
 
-**Mobilize:** `/proposal-draft` `/problem-statement` `/kickoff-plan` `/stakeholder-map` `/workplan-build` `/data-request` `/project-intake` `/connect-mcps`
+**Mobilize:** `/proposal-draft` `/problem-statement` `/kickoff-plan` `/stakeholder-map` `/workplan-build` `/data-request` `/project-intake` `/program-import` `/connect-mcps`
 
 **Structure the problem:** `/day-one-answer` `/issue-tree` `/hypothesis-draft` `/prioritize-analyses`
 
@@ -117,7 +117,7 @@ Run "show me what you've learned" anytime. Learning stays in your workspace file
 
 **Deck:** `/storyline` → `/ghost-deck` → `/slide-draft` → `/number-tie-out` → `/deck-qc` → `/review-panel`
 
-**Program (one team, many projects):** `/project-intake` (each new project) → `/project-card` (after each change) → `/program-rollup` (weekly and before SteerCo) → `/steerco-prep`. Setup: `setup/running-a-program.md`
+**Program (one team, many projects):** `/program-import` (existing projects, once) or `/project-intake` (each new project) → `/project-card` (after each change) → `/program-rollup` (weekly and before SteerCo) → `/steerco-prep`. Setup: `setup/running-a-program.md`
 
 **SteerCo:** `/stakeholder-map` → pre-wires → `/steerco-prep` → pre-read (2 to 3 days ahead) → meeting → `/decision-doc`
 

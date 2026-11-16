@@ -43,7 +43,7 @@ Consulting OS rule 7: client data stays on approved platforms.
 1. In SharePoint (preferred, so the team can share) or OneDrive, create **Consulting Engagements**, and inside it **00_Core** and **Clients**.
 2. Upload the three files in `copilot/knowledge-pack/` to `00_Core`:
    - `CORE-1_Engagement-Model-Frameworks-Standards.docx`
-   - `CORE-2_Playbooks-Mobilize-to-Diagnose.docx` (23 playbooks)
+   - `CORE-2_Playbooks-Mobilize-to-Diagnose.docx` (24 playbooks)
    - `CORE-3_Playbooks-Model-Deck-Rhythm-Close.docx` (35 playbooks)
 3. Also upload `notebook-instructions.md` and `prompt-library.md` from `copilot/` so you have them next time.
 

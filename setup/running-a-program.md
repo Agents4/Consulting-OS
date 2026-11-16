@@ -12,10 +12,15 @@ Use this when one team and one SteerCo run a transformation made of many project
 
 The card is the unit of knowledge. Detail lives in linked evidence docs. Templates: `templates/project-register-template.md` and `templates/project-card-template.md`.
 
+## Starting from projects you already have
+
+Do not retype them. Run `/program-import` on the folder that holds the charters, plans, status reports, decks and trackers. It groups the files by project, drafts a card and a register row for each from the documents alone, and marks every gap as Unknown with a named owner to ask. It copies status from the source and does not assign one. Where documents disagree on a number it shows both. You approve each project and the program hypothesis it maps to, then move the agreed cards into the program folder. Work in batches if there are many projects.
+
 ## Skills
 
 | When | Skill |
 |---|---|
+| Projects already exist | `/program-import` (once, in batches) |
 | A new project joins | `/project-intake` |
 | After a meeting, a decision or a result | `/project-card` |
 | Weekly, and before every SteerCo | `/program-rollup`, then `/steerco-prep` and `/status-update` |
