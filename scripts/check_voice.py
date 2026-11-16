@@ -29,6 +29,9 @@ def main() -> int:
             path = line[6:] if line.startswith("+++ b/") else ""
         elif line.startswith("+") and not line.startswith("+++") and path.endswith(".md"):
             text = line[1:]
+            # A line that lists the banned words is stating the rule, not breaking it.
+            if sum(w in text.lower() for w in BANNED) >= 3:
+                continue
             if EM_DASH in text:
                 bad.append((path, "em dash", text.strip()[:120]))
             m = word.search(text)
